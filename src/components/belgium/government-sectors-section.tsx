@@ -62,7 +62,7 @@ export async function GovernmentSectorsSection() {
                 ? debtContributions.rows.find((r) => r.slug === row.slug)
                 : undefined;
               return (
-                <div key={row.slug} className="rounded-md border border-border bg-surface p-5 sm:p-6">
+                <div key={row.slug} className="min-w-0 rounded-md border border-border bg-surface p-5 sm:p-6">
                   <h3 className="text-sm font-medium text-foreground-muted">
                     {row.label} <span className="text-foreground-subtle">({row.sectorCode})</span>
                   </h3>
@@ -105,11 +105,11 @@ export async function GovernmentSectorsSection() {
           </div>
 
           <div className="mt-4 grid gap-6 lg:grid-cols-2">
-            <div className="rounded-md border border-border bg-surface p-5 sm:p-6">
+            <div className="min-w-0 rounded-md border border-border bg-surface p-5 sm:p-6">
               <HorizontalBarChart data={debtBarData} ariaLabel="Bijdrage per deelsector aan de overheidsschuld" format="currency" />
             </div>
             {debtContributions.totalConsolidatedGrossDebt ? (
-              <div className="rounded-md border border-border bg-surface p-5 sm:p-6">
+              <div className="min-w-0 rounded-md border border-border bg-surface p-5 sm:p-6">
                 <MetricCard title="Totale geconsolideerde overheidsschuld (S13)" metric={debtContributions.totalConsolidatedGrossDebt} />
               </div>
             ) : null}

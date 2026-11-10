@@ -10,7 +10,9 @@ Website: https://belgie.dakkofferverhuur.be
 - Belastingen, overheidspersoneel en burgemeesters in verhouding tot inwoners en oppervlakte.
 - Bestuurs- en personeelskosten, onderwijs, gezondheid en demografische context voor België, Frankrijk, Nederland, Duitsland en Spanje.
 - Kostenevolutie met inflatiecorrectie en een afzonderlijke koopkrachtbenadering.
-- Interactieve landenkaart met elf onderwerpen, percentages, procentpunten en relatieve verschillen tussen landen.
+- Interactieve landenkaart met veertien onderwerpen, percentages, procentpunten en relatieve verschillen tussen landen.
+- Volledige overheidsrekening met sociale bescherming, economische uitgaven, rentelasten, investeringen, schuldbrug, garanties en historische scenario’s.
+- Vergelijkingen van 2015–2025 met bedragen per inwoner, bbp-aandelen en inflatiecorrectie.
 - Recente btw-opbrengsten en tarieven, werkloosheid, NAVO-budgetramingen en transportbelastingen, met een btw-rekenhulp en officiële autoregels.
 
 De bronnen omvatten Eurostat, de OESO, Statbel en de Nationale Bank van België. Een deel van de site gebruikt geïmporteerde PostgreSQL-data; de landenvergelijkingen gebruiken gecontroleerde bronmomentopnamen. Er wordt geen productiedatabase meegeleverd.
@@ -40,7 +42,7 @@ npm test
 npm run build
 ```
 
-Bijdragerichtlijnen: [AGENTS.md](AGENTS.md). Bronnen en afbakeningen: [landenvergelijking](docs/COUNTRY_COMPARISON.md), [bestuurskosten en context](docs/COMPLETE_COUNTRY_COMPARISON.md), [interactieve kaart](docs/COUNTRY_EXPLORER.md), [recente belastingen en arbeidsmarkt](docs/RECENT_COUNTRY_COMPARISON.md) en [consolidatie](docs/CONSOLIDATION.md).
+Bijdragerichtlijnen: [AGENTS.md](AGENTS.md). Bronnen en afbakeningen: [landenvergelijking](docs/COUNTRY_COMPARISON.md), [bestuurskosten en context](docs/COMPLETE_COUNTRY_COMPARISON.md), [interactieve kaart](docs/COUNTRY_EXPLORER.md), [recente belastingen en arbeidsmarkt](docs/RECENT_COUNTRY_COMPARISON.md), [volledige overheidsrekening](docs/FINANCIAL_PATTERN.md) en [consolidatie](docs/CONSOLIDATION.md).
 
 ## Productie
 

@@ -75,6 +75,7 @@ export function NeighbourComparison() {
           </details>
           <Link href="/vergelijk#landenkaart" className="inline-flex min-h-11 items-center gap-2 rounded-sm bg-foreground px-5 py-3 text-sm font-medium text-background transition-colors hover:bg-data-series-2">Verken verschillen op de kaart <ArrowUpRight aria-hidden="true" className="h-4 w-4" /></Link>
         </div>
+        <Link href="/vergelijk#geldstromen" className="mt-5 mr-6 inline-flex min-h-11 items-center text-sm font-medium text-accent underline underline-offset-4">Volg de volledige inkomsten, uitgaven en schuldontwikkeling</Link>
         <Link href="/vergelijk#actuele-vergelijking" className="mt-5 inline-flex min-h-11 items-center text-sm font-medium text-accent underline underline-offset-4">Vergelijk ook btw, werkloosheid, NAVO en autobelastingen</Link>
         <p className="mt-5 max-w-2xl text-xs text-foreground-subtle">Bronnen: OESO en Eurostat · gecontroleerd op {reviewedDate}. Dit is een handmatig bijgewerkte momentopname. Een hoger of lager cijfer zegt op zichzelf niets over de kwaliteit van publieke diensten.</p>
       </div>

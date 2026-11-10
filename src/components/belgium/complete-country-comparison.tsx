@@ -1,5 +1,6 @@
 import { CountryExplorer } from "./country-explorer";
 import { RecentCountryComparison } from "./recent-country-comparison";
+import { FinancialPattern } from "./financial-pattern";
 import Link from "next/link";
 import {
   completeComparisonCountries as countries, comparisonContextReviewedAt, comparisonContextYear,
@@ -16,6 +17,7 @@ const reviewedDate = new Intl.DateTimeFormat("nl-BE", { day: "numeric", month: "
 export function CompleteCountryComparison() {
   return (
     <>
+      <FinancialPattern />
       <RecentCountryComparison />
       <CountryExplorer />
       <AdministrationCostComparison />

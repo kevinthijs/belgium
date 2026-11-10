@@ -13,6 +13,7 @@ const SECTIONS = [
   { id: "per-inwoner", label: "Per inwoner" },
   { id: "landenkaart", label: "Landenkaart" },
   { id: "actuele-vergelijking", label: "Btw, werkloosheid, NAVO en auto’s" },
+  { id: "geldstromen", label: "Volledige overheidsrekening" },
   { id: "bestuurskosten", label: "Bestuurskosten vergelijken" },
   { id: "publieke-resultaten", label: "Onderwijs en zorg vergelijken" },
   { id: "demografische-context", label: "Demografische context" },

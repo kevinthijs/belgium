@@ -4,7 +4,7 @@ import { explorerCountries, explorerMetrics, explorerObservation, explorerValues
 
 describe("country explorer source coverage", () => {
   it("has reviewed data for all topics, units and five countries", () => {
-    expect(explorerMetrics).toHaveLength(11);
+    expect(explorerMetrics).toHaveLength(14);
     for (const metric of explorerMetrics) {
       for (const unit of ["gdp", "euro", "pps"] as const) {
         const values = explorerValues(metric.key, unit);

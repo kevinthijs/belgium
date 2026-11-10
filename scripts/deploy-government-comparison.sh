@@ -3,7 +3,7 @@
 set -euo pipefail
 project_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$project_dir"
-release_image='convoy-belgium:recent-taxes-20261110'
+release_image='convoy-belgium:financial-pattern-20261110-v2'
 backup_dir="/docker/backups/belgium-government-$(date -u +%Y%m%dT%H%M%SZ)"
 
 docker compose ps web >/dev/null
@@ -28,7 +28,7 @@ from pathlib import Path
 import sys
 p=Path('docker-compose.yml')
 s=p.read_text()
-allowed=['convoy-belgium:polish-20261109','convoy-belgium:government-comparison-20261109','convoy-belgium:complete-comparison-20261109','convoy-belgium:map-motion-20261110','convoy-belgium:map-motion-20261110-v2','convoy-belgium:recent-taxes-20261110']
+allowed=['convoy-belgium:polish-20261109','convoy-belgium:government-comparison-20261109','convoy-belgium:complete-comparison-20261109','convoy-belgium:map-motion-20261110','convoy-belgium:map-motion-20261110-v2','convoy-belgium:recent-taxes-20261110','convoy-belgium:financial-pattern-20261110','convoy-belgium:financial-pattern-20261110-v2']
 matches=['image: '+image for image in allowed if sum(line.strip()=='image: '+image for line in s.splitlines())==1]
 if len(matches)!=1:
  raise RuntimeError('Unexpected production image; Compose has not been changed')
@@ -41,7 +41,7 @@ for _ in range(45):
  try:
   with urllib.request.urlopen('http://127.0.0.1:3140/vergelijk',timeout=5) as r:
    html=r.read().decode()
-   assert r.status==200 and all(marker in html for marker in ['actuele-vergelijking','Btw-opbrengst','Belgisch btw-tarief','landenkaart','Relatief verschil','overheid-en-burgemeesters','bestuurskosten','publieke-resultaten','demografische-context','evolutie-bestuurskosten','34.875'])
+   assert r.status==200 and all(marker in html for marker in ['geldstromen','De volledige overheidsrekening','Primair saldo','Statistische saldoaansluiting','actuele-vergelijking','Btw-opbrengst','Belgisch btw-tarief','landenkaart','Relatief verschil','overheid-en-burgemeesters','bestuurskosten','publieke-resultaten','demografische-context','evolutie-bestuurskosten','34.875'])
    break
  except Exception:
   time.sleep(1)

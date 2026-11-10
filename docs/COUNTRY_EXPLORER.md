@@ -39,3 +39,5 @@ Op 10 november 2026 gepubliceerd met image `convoy-belgium:map-motion-20261110-v
 Vorige configuratie: `/docker/backups/belgium-government-20261110T080337Z/docker-compose.before.yml`. De database is niet gewijzigd. De publieke startpagina, `/vergelijk` en `/belgie` geven HTTP 200. Interactieve productiecontrole op 1440 en 390 pixels bevestigt werkende kaart- en startpaginakeuzes, zonder browserfouten of pagina-overflow. De mobiele dossiernavigatie blijft binnen de paginabreedte. Web en database zijn gezond. De validatierapporten staan in dezelfde back-upmap.
 
 De vier latere onderwerpen (btw-opbrengst, werkloosheid, transportbelastingen en NAVO-verdeelsleutel) volgen hun eigen gemeenschappelijke periode. Het bronjaar op de kaart verandert mee. Zie [recente belastingen en arbeidsmarkt](RECENT_COUNTRY_COMPARISON.md) voor bronnen, actuele perioden en afbakeningen.
+
+De kaart bevat daarnaast sociale bescherming (nieuwste gemeenschappelijke detailjaar 2024), betaalde rente en bruto vaste investeringen (2025). Deze onderwerpen gebruiken bbp-aandelen uit de [volledige overheidsrekening](FINANCIAL_PATTERN.md), met eigen bronperioden.

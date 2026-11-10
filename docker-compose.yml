@@ -20,7 +20,7 @@ services:
       timeout: 5s
       retries: 12
   web:
-    image: convoy-belgium:recent-taxes-20261110
+    image: convoy-belgium:financial-pattern-20261110-v2
     build: .
     container_name: websites-belgium-web
     restart: unless-stopped
