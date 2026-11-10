@@ -18,7 +18,7 @@ export async function HomeHero() {
           <p className="max-w-lg text-base text-foreground-muted">{t.hero.subheading}</p>
           <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
             <a href="#overzicht" className="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-accent underline decoration-accent/40 underline-offset-4 hover:decoration-accent">Verken de cijfers <ArrowDown className="h-4 w-4" aria-hidden="true" /></a>
-            <Link href="/vergelijk" className="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-foreground underline decoration-border underline-offset-4 hover:decoration-foreground">Vergelijk met Frankrijk <ArrowUpRight className="h-4 w-4" aria-hidden="true" /></Link>
+            <Link href="/vergelijk#landenkaart" className="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-foreground underline decoration-border underline-offset-4 hover:decoration-foreground">Vergelijk met Frankrijk <ArrowUpRight className="h-4 w-4" aria-hidden="true" /></Link>
           </div>
         </div>
       </div>

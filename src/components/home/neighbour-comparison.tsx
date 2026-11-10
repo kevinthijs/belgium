@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { comparisonCountries, comparisonMetrics, comparisonReviewedAt } from "@/data/reference/country-comparison";
+import { compareCountryValues } from "@/data/derivations/relative-comparison";
 import { formatPercentage } from "@/lib/format/money";
 
 const featuredKeys = ["taxWedgePercentLabourCost2025", "generalGovernmentEmploymentPercent2023", "governmentExpenditurePercentGDP2024"] as const;
@@ -49,12 +50,13 @@ export function NeighbourComparison() {
                     <div key={country.code} className="grid grid-cols-[5.5rem_1fr_4.5rem] items-center gap-3 sm:grid-cols-[6rem_1fr_5rem] sm:gap-4">
                       <dt className={`text-sm ${country.code === "BE" ? "font-semibold text-accent" : "text-foreground-muted"}`}>{country.name}</dt>
                       <dd aria-hidden="true" className="h-2 overflow-hidden rounded-sm bg-border">
-                        <div className={`h-full rounded-sm ${country.code === "BE" ? "bg-accent" : "bg-data-series-2"}`} style={{ width: `${country[metric.key] / maximum * 100}%` }} />
+                        <div className={`comparison-bar h-full w-full rounded-sm ${country.code === "BE" ? "bg-accent" : "bg-data-series-2"}`} style={{ transform: `scaleX(${country[metric.key] / maximum})` }} />
                       </dd>
                       <dd className="text-right text-xl font-semibold tabular-nums tracking-tight">{formatPercentage(country[metric.key])}</dd>
                     </div>
                   ))}
                 </dl>
+                <p className="text-sm text-foreground-muted lg:col-start-2">{(() => { const difference = compareCountryValues(neighbour[metric.key], belgium[metric.key])!; return difference.difference === 0 ? `${neighbour.name} heeft hetzelfde aandeel als België.` : `${neighbour.name}: ${new Intl.NumberFormat("nl-BE", { maximumFractionDigits: 2 }).format(Math.abs(difference.difference))} procentpunt ${difference.difference > 0 ? "hoger" : "lager"} dan België (${new Intl.NumberFormat("nl-BE", { maximumFractionDigits: 1 }).format(Math.abs(difference.relativePercent!))}% relatief).`; })()}</p>
               </div>
             );
           })}
@@ -71,7 +73,7 @@ export function NeighbourComparison() {
               ))}
             </dl>
           </details>
-          <Link href="/vergelijk" className="inline-flex min-h-11 items-center gap-2 rounded-sm bg-foreground px-5 py-3 text-sm font-medium text-background transition-colors hover:bg-data-series-2">Vergelijk alle 8 indicatoren <ArrowUpRight aria-hidden="true" className="h-4 w-4" /></Link>
+          <Link href="/vergelijk#landenkaart" className="inline-flex min-h-11 items-center gap-2 rounded-sm bg-foreground px-5 py-3 text-sm font-medium text-background transition-colors hover:bg-data-series-2">Verken verschillen op de kaart <ArrowUpRight aria-hidden="true" className="h-4 w-4" /></Link>
         </div>
         <p className="mt-5 max-w-2xl text-xs text-foreground-subtle">Bronnen: OESO en Eurostat · gecontroleerd op {reviewedDate}. Dit is een handmatig bijgewerkte momentopname. Een hoger of lager cijfer zegt op zichzelf niets over de kwaliteit van publieke diensten.</p>
       </div>

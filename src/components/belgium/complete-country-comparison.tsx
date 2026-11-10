@@ -1,3 +1,4 @@
+import { CountryExplorer } from "./country-explorer";
 import Link from "next/link";
 import {
   completeComparisonCountries as countries, comparisonContextReviewedAt, comparisonContextYear,
@@ -14,6 +15,7 @@ const reviewedDate = new Intl.DateTimeFormat("nl-BE", { day: "numeric", month: "
 export function CompleteCountryComparison() {
   return (
     <>
+      <CountryExplorer />
       <AdministrationCostComparison />
       <section id="publieke-resultaten" aria-labelledby="publieke-resultaten-titel" className="mx-auto max-w-content px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         <h2 id="publieke-resultaten-titel" className="text-[clamp(1.75rem,3vw,2.25rem)] font-semibold tracking-tight">Wat krijgen burgers terug?</h2>
