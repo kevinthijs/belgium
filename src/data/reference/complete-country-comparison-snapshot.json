@@ -1,0 +1,2564 @@
+{
+  "reviewedAt": "2026-11-09",
+  "referenceYear": 2024,
+  "trendYears": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "countries": [
+    {
+      "code": "BE",
+      "name": "België"
+    },
+    {
+      "code": "FR",
+      "name": "Frankrijk"
+    },
+    {
+      "code": "NL",
+      "name": "Nederland"
+    },
+    {
+      "code": "DE",
+      "name": "Duitsland"
+    },
+    {
+      "code": "ES",
+      "name": "Spanje"
+    }
+  ],
+  "sources": {
+    "spending": {
+      "dataset": "gov_10a_exp",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10a_exp?lang=EN&geo=BE&geo=FR&geo=NL&geo=DE&geo=ES&unit=MIO_EUR&unit=PC_GDP&sector=S13&cofog99=GF0101&cofog99=TOTAL&cofog99=GF07&cofog99=GF09&na_item=TE&na_item=D1&sinceTimePeriod=2019&untilTimePeriod=2024",
+      "retrievedAt": "2026-11-09T21:39:59.080545+00:00",
+      "data": {
+        "version": "2.0",
+        "class": "dataset",
+        "label": "General government expenditure by function (COFOG)",
+        "source": "ESTAT",
+        "updated": "2026-10-21T23:00:00+0200",
+        "value": {
+          "60": 4414.1,
+          "61": 4505.7,
+          "62": 4621.2,
+          "63": 4763.0,
+          "64": 5200.0,
+          "65": 5284.4,
+          "66": 20656.0,
+          "67": 21660.0,
+          "68": 22817.0,
+          "69": 23184.0,
+          "70": 24287.0,
+          "71": 27004.0,
+          "72": 5702.0,
+          "73": 5981.0,
+          "74": 6104.0,
+          "75": 6422.0,
+          "76": 6782.0,
+          "77": 7082.0,
+          "78": 11729.1,
+          "79": 11880.6,
+          "80": 11662.7,
+          "81": 12000.0,
+          "82": 12281.6,
+          "83": 12532.7,
+          "84": 4415.0,
+          "85": 4610.0,
+          "86": 4650.0,
+          "87": 5064.0,
+          "88": 5460.0,
+          "89": 6269.0,
+          "90": 10461.4,
+          "91": 11404.4,
+          "92": 12217.9,
+          "93": 12365.9,
+          "94": 12640.5,
+          "95": 12689.3,
+          "96": 67655.0,
+          "97": 73229.0,
+          "98": 81281.0,
+          "99": 80133.0,
+          "100": 80994.0,
+          "101": 89380.0,
+          "102": 18789.0,
+          "103": 19873.0,
+          "104": 21941.0,
+          "105": 21308.0,
+          "106": 20901.0,
+          "107": 21444.0,
+          "108": 39364.0,
+          "109": 43463.1,
+          "110": 46527.7,
+          "111": 44493.2,
+          "112": 45259.6,
+          "113": 42818.4,
+          "114": 13480.0,
+          "115": 14642.0,
+          "116": 15714.0,
+          "117": 16327.0,
+          "118": 16671.0,
+          "119": 22816.0,
+          "120": 1539.4,
+          "121": 1687.7,
+          "122": 1765.1,
+          "123": 1859.5,
+          "124": 1983.1,
+          "125": 2113.1,
+          "126": 14319.0,
+          "127": 14956.0,
+          "128": 15677.0,
+          "129": 15957.0,
+          "130": 16523.0,
+          "131": 17420.0,
+          "132": 34265.0,
+          "133": 36906.0,
+          "134": 39376.0,
+          "135": 41046.0,
+          "136": 43479.0,
+          "137": 46251.0,
+          "138": 53912.7,
+          "139": 56992.9,
+          "140": 61123.5,
+          "141": 64323.6,
+          "142": 67466.8,
+          "143": 70075.0,
+          "144": 2049.0,
+          "145": 2244.0,
+          "146": 2397.0,
+          "147": 2447.0,
+          "148": 2741.0,
+          "149": 2942.0,
+          "150": 35752.2,
+          "151": 39669.4,
+          "152": 42484.7,
+          "153": 43766.9,
+          "154": 47001.0,
+          "155": 49579.9,
+          "156": 252983.0,
+          "157": 287454.0,
+          "158": 313269.0,
+          "159": 329207.0,
+          "160": 312210.0,
+          "161": 329254.0,
+          "162": 75917.0,
+          "163": 85545.0,
+          "164": 88541.0,
+          "165": 93327.0,
+          "166": 98630.0,
+          "167": 102942.0,
+          "168": 198147.3,
+          "169": 208023.6,
+          "170": 234725.0,
+          "171": 240772.7,
+          "172": 249676.4,
+          "173": 261156.3,
+          "174": 59868.0,
+          "175": 66321.0,
+          "176": 73736.0,
+          "177": 71318.0,
+          "178": 74408.0,
+          "179": 81501.0,
+          "180": 24108.8,
+          "181": 24918.1,
+          "182": 25822.1,
+          "183": 28251.1,
+          "184": 30678.1,
+          "185": 32134.3,
+          "186": 86395.0,
+          "187": 89788.0,
+          "188": 92694.0,
+          "189": 97636.0,
+          "190": 102754.0,
+          "191": 104879.0,
+          "192": 34234.0,
+          "193": 35739.0,
+          "194": 37781.0,
+          "195": 39120.0,
+          "196": 41331.0,
+          "197": 43635.0,
+          "198": 85292.8,
+          "199": 86709.5,
+          "200": 89322.3,
+          "201": 93150.7,
+          "202": 97719.9,
+          "203": 103784.5,
+          "204": 23575.0,
+          "205": 25212.0,
+          "206": 25951.0,
+          "207": 28857.0,
+          "208": 31349.0,
+          "209": 33177.0,
+          "210": 29340.4,
+          "211": 30244.1,
+          "212": 31481.4,
+          "213": 34822.2,
+          "214": 37751.0,
+          "215": 39283.6,
+          "216": 151845.0,
+          "217": 157621.0,
+          "218": 163730.0,
+          "219": 173973.0,
+          "220": 187925.0,
+          "221": 194584.0,
+          "222": 50052.0,
+          "223": 52003.0,
+          "224": 55885.0,
+          "225": 58669.0,
+          "226": 62532.0,
+          "227": 65862.0,
+          "228": 122429.5,
+          "229": 120102.1,
+          "230": 127071.8,
+          "231": 134016.9,
+          "232": 141554.8,
+          "233": 148639.6,
+          "234": 40533.0,
+          "235": 41739.0,
+          "236": 44200.0,
+          "237": 48327.0,
+          "238": 53256.0,
+          "239": 57152.0,
+          "0": 58763.6,
+          "1": 60570.0,
+          "2": 62841.6,
+          "3": 68193.6,
+          "4": 73622.9,
+          "5": 77342.3,
+          "6": 285100.0,
+          "7": 296745.0,
+          "8": 307246.0,
+          "9": 321255.0,
+          "10": 340501.0,
+          "11": 357317.0,
+          "12": 134769.0,
+          "13": 140652.0,
+          "14": 148094.0,
+          "15": 154459.0,
+          "16": 163887.0,
+          "17": 172749.0,
+          "18": 300632.0,
+          "19": 307596.0,
+          "20": 317140.0,
+          "21": 331171.0,
+          "22": 346293.3,
+          "23": 362149.3,
+          "24": 68819.0,
+          "25": 72588.0,
+          "26": 75463.0,
+          "27": 82007.0,
+          "28": 89159.0,
+          "29": 97515.0,
+          "30": 248119.7,
+          "31": 271075.8,
+          "32": 278017.3,
+          "33": 294710.9,
+          "34": 318074.9,
+          "35": 335287.9,
+          "36": 1610615.0,
+          "37": 1763784.0,
+          "38": 1865819.0,
+          "39": 1939208.0,
+          "40": 2031433.0,
+          "41": 2139717.0,
+          "42": 526769.0,
+          "43": 580164.0,
+          "44": 611124.0,
+          "45": 637117.0,
+          "46": 680225.0,
+          "47": 725001.0,
+          "48": 1346157.9,
+          "49": 1430358.8,
+          "50": 1491381.7,
+          "51": 1550331.6,
+          "52": 1607392.5,
+          "53": 1671793.8,
+          "54": 349318.0,
+          "55": 390377.0,
+          "56": 409171.0,
+          "57": 429984.0,
+          "58": 462064.0,
+          "59": 498516.0,
+          "300": 0.9,
+          "301": 1.0,
+          "302": 0.9,
+          "303": 0.8,
+          "304": 0.9,
+          "305": 0.9,
+          "306": 0.6,
+          "307": 0.6,
+          "308": 0.6,
+          "309": 0.6,
+          "310": 0.6,
+          "311": 0.6,
+          "312": 0.5,
+          "313": 0.5,
+          "314": 0.5,
+          "315": 0.5,
+          "316": 0.5,
+          "317": 0.4,
+          "318": 0.5,
+          "319": 0.5,
+          "320": 0.5,
+          "321": 0.5,
+          "322": 0.4,
+          "323": 0.4,
+          "324": 0.5,
+          "325": 0.6,
+          "326": 0.5,
+          "327": 0.5,
+          "328": 0.5,
+          "329": 0.6,
+          "330": 2.2,
+          "331": 2.5,
+          "332": 2.4,
+          "333": 2.2,
+          "334": 2.1,
+          "335": 2.0,
+          "336": 1.9,
+          "337": 2.1,
+          "338": 2.2,
+          "339": 2.0,
+          "340": 1.9,
+          "341": 2.1,
+          "342": 1.5,
+          "343": 1.8,
+          "344": 1.8,
+          "345": 1.5,
+          "346": 1.4,
+          "347": 1.3,
+          "348": 1.6,
+          "349": 1.9,
+          "350": 1.9,
+          "351": 1.7,
+          "352": 1.6,
+          "353": 1.5,
+          "354": 1.6,
+          "355": 1.8,
+          "356": 1.8,
+          "357": 1.6,
+          "358": 1.6,
+          "359": 2.0,
+          "360": 0.3,
+          "361": 0.4,
+          "362": 0.3,
+          "363": 0.3,
+          "364": 0.3,
+          "365": 0.3,
+          "366": 0.4,
+          "367": 0.4,
+          "368": 0.4,
+          "369": 0.4,
+          "370": 0.4,
+          "371": 0.4,
+          "372": 2.7,
+          "373": 3.3,
+          "374": 3.2,
+          "375": 3.0,
+          "376": 2.9,
+          "377": 2.9,
+          "378": 2.2,
+          "379": 2.5,
+          "380": 2.4,
+          "381": 2.4,
+          "382": 2.4,
+          "383": 2.4,
+          "384": 0.2,
+          "385": 0.3,
+          "386": 0.3,
+          "387": 0.2,
+          "388": 0.3,
+          "389": 0.3,
+          "390": 7.5,
+          "391": 8.6,
+          "392": 8.4,
+          "393": 7.8,
+          "394": 7.8,
+          "395": 8.0,
+          "396": 7.2,
+          "397": 8.3,
+          "398": 8.5,
+          "399": 8.3,
+          "400": 7.4,
+          "401": 7.6,
+          "402": 6.1,
+          "403": 7.6,
+          "404": 7.2,
+          "405": 6.8,
+          "406": 6.6,
+          "407": 6.5,
+          "408": 8.1,
+          "409": 9.0,
+          "410": 9.4,
+          "411": 9.1,
+          "412": 8.8,
+          "413": 8.9,
+          "414": 7.2,
+          "415": 8.1,
+          "416": 8.3,
+          "417": 7.2,
+          "418": 7.1,
+          "419": 7.3,
+          "420": 5.0,
+          "421": 5.4,
+          "422": 5.1,
+          "423": 5.0,
+          "424": 5.1,
+          "425": 5.2,
+          "426": 2.4,
+          "427": 2.6,
+          "428": 2.5,
+          "429": 2.4,
+          "430": 2.4,
+          "431": 2.4,
+          "432": 2.7,
+          "433": 3.2,
+          "434": 3.1,
+          "435": 2.8,
+          "436": 2.8,
+          "437": 2.7,
+          "438": 3.5,
+          "439": 3.7,
+          "440": 3.6,
+          "441": 3.5,
+          "442": 3.5,
+          "443": 3.6,
+          "444": 2.8,
+          "445": 3.1,
+          "446": 2.9,
+          "447": 2.9,
+          "448": 3.0,
+          "449": 3.0,
+          "450": 6.1,
+          "451": 6.5,
+          "452": 6.2,
+          "453": 6.2,
+          "454": 6.3,
+          "455": 6.3,
+          "456": 4.3,
+          "457": 4.6,
+          "458": 4.4,
+          "459": 4.4,
+          "460": 4.5,
+          "461": 4.5,
+          "462": 4.0,
+          "463": 4.6,
+          "464": 4.5,
+          "465": 4.3,
+          "466": 4.2,
+          "467": 4.1,
+          "468": 5.0,
+          "469": 5.2,
+          "470": 5.1,
+          "471": 5.0,
+          "472": 5.0,
+          "473": 5.1,
+          "474": 4.9,
+          "475": 5.1,
+          "476": 5.0,
+          "477": 4.9,
+          "478": 5.1,
+          "479": 5.1,
+          "240": 12.3,
+          "241": 13.1,
+          "242": 12.4,
+          "243": 12.1,
+          "244": 12.2,
+          "245": 12.5,
+          "246": 8.1,
+          "247": 8.6,
+          "248": 8.3,
+          "249": 8.1,
+          "250": 8.1,
+          "251": 8.3,
+          "252": 10.7,
+          "253": 12.5,
+          "254": 12.0,
+          "255": 11.2,
+          "256": 10.9,
+          "257": 10.8,
+          "258": 12.4,
+          "259": 13.3,
+          "260": 12.6,
+          "261": 12.5,
+          "262": 12.3,
+          "263": 12.4,
+          "264": 8.3,
+          "265": 8.9,
+          "266": 8.5,
+          "267": 8.3,
+          "268": 8.5,
+          "269": 8.7,
+          "270": 51.8,
+          "271": 58.5,
+          "272": 54.9,
+          "273": 52.5,
+          "274": 52.8,
+          "275": 54.1,
+          "276": 45.5,
+          "277": 51.1,
+          "278": 50.7,
+          "279": 48.6,
+          "280": 48.1,
+          "281": 49.4,
+          "282": 42.0,
+          "283": 51.4,
+          "284": 49.5,
+          "285": 46.3,
+          "286": 45.4,
+          "287": 45.5,
+          "288": 55.3,
+          "289": 61.7,
+          "290": 59.5,
+          "291": 58.4,
+          "292": 56.9,
+          "293": 57.3,
+          "294": 42.1,
+          "295": 47.8,
+          "296": 45.9,
+          "297": 43.3,
+          "298": 44.0,
+          "299": 44.4
+        },
+        "status": {
+          "65": "p",
+          "69": "p",
+          "70": "p",
+          "71": "p",
+          "77": "p",
+          "82": "p",
+          "83": "p",
+          "95": "p",
+          "99": "p",
+          "100": "p",
+          "101": "p",
+          "107": "p",
+          "112": "p",
+          "113": "p",
+          "125": "p",
+          "129": "p",
+          "130": "p",
+          "131": "p",
+          "137": "p",
+          "142": "p",
+          "143": "p",
+          "155": "p",
+          "159": "p",
+          "160": "p",
+          "161": "p",
+          "167": "p",
+          "172": "p",
+          "173": "p",
+          "185": "p",
+          "189": "p",
+          "190": "p",
+          "191": "p",
+          "197": "p",
+          "202": "p",
+          "203": "p",
+          "215": "p",
+          "219": "p",
+          "220": "p",
+          "221": "p",
+          "227": "p",
+          "232": "p",
+          "233": "p",
+          "5": "p",
+          "9": "p",
+          "10": "p",
+          "11": "p",
+          "17": "p",
+          "22": "p",
+          "23": "p",
+          "35": "p",
+          "39": "p",
+          "40": "p",
+          "41": "p",
+          "47": "p",
+          "52": "p",
+          "53": "p",
+          "305": "p",
+          "309": "p",
+          "310": "p",
+          "311": "p",
+          "317": "p",
+          "322": "p",
+          "323": "p",
+          "335": "p",
+          "339": "p",
+          "340": "p",
+          "341": "p",
+          "347": "p",
+          "352": "p",
+          "353": "p",
+          "365": "p",
+          "369": "p",
+          "370": "p",
+          "371": "p",
+          "377": "p",
+          "382": "p",
+          "383": "p",
+          "395": "p",
+          "399": "p",
+          "400": "p",
+          "401": "p",
+          "407": "p",
+          "412": "p",
+          "413": "p",
+          "425": "p",
+          "429": "p",
+          "430": "p",
+          "431": "p",
+          "437": "p",
+          "442": "p",
+          "443": "p",
+          "455": "p",
+          "459": "p",
+          "460": "p",
+          "461": "p",
+          "467": "p",
+          "472": "p",
+          "473": "p",
+          "245": "p",
+          "249": "p",
+          "250": "p",
+          "251": "p",
+          "257": "p",
+          "262": "p",
+          "263": "p",
+          "275": "p",
+          "279": "p",
+          "280": "p",
+          "281": "p",
+          "287": "p",
+          "292": "p",
+          "293": "p"
+        },
+        "id": [
+          "freq",
+          "unit",
+          "sector",
+          "cofog99",
+          "na_item",
+          "geo",
+          "time"
+        ],
+        "size": [
+          1,
+          2,
+          1,
+          4,
+          2,
+          5,
+          6
+        ],
+        "dimension": {
+          "freq": {
+            "label": "Time frequency",
+            "category": {
+              "index": {
+                "A": 0
+              },
+              "label": {
+                "A": "Annual"
+              }
+            }
+          },
+          "unit": {
+            "label": "Unit of measure",
+            "category": {
+              "index": {
+                "MIO_EUR": 0,
+                "PC_GDP": 1
+              },
+              "label": {
+                "MIO_EUR": "Million euro",
+                "PC_GDP": "Percentage of gross domestic product (GDP)"
+              }
+            }
+          },
+          "sector": {
+            "label": "Sector",
+            "category": {
+              "index": {
+                "S13": 0
+              },
+              "label": {
+                "S13": "General government"
+              }
+            }
+          },
+          "cofog99": {
+            "label": "Classification of the functions of government (COFOG 1999)",
+            "category": {
+              "index": {
+                "TOTAL": 0,
+                "GF0101": 1,
+                "GF07": 2,
+                "GF09": 3
+              },
+              "label": {
+                "TOTAL": "Total",
+                "GF0101": "Executive and legislative organs, financial and fiscal affairs, external affairs",
+                "GF07": "Health",
+                "GF09": "Education"
+              }
+            }
+          },
+          "na_item": {
+            "label": "National accounts indicator (ESA 2010)",
+            "category": {
+              "index": {
+                "D1": 0,
+                "TE": 1
+              },
+              "label": {
+                "D1": "Compensation of employees",
+                "TE": "Total general government expenditure"
+              }
+            }
+          },
+          "geo": {
+            "label": "Geopolitical entity (reporting)",
+            "category": {
+              "index": {
+                "BE": 0,
+                "DE": 1,
+                "ES": 2,
+                "FR": 3,
+                "NL": 4
+              },
+              "label": {
+                "BE": "Belgium",
+                "DE": "Germany",
+                "ES": "Spain",
+                "FR": "France",
+                "NL": "Netherlands"
+              }
+            }
+          },
+          "time": {
+            "label": "Time",
+            "category": {
+              "index": {
+                "2019": 0,
+                "2020": 1,
+                "2021": 2,
+                "2022": 3,
+                "2023": 4,
+                "2024": 5
+              },
+              "label": {
+                "2019": "2019",
+                "2020": "2020",
+                "2021": "2021",
+                "2022": "2022",
+                "2023": "2023",
+                "2024": "2024"
+              }
+            }
+          }
+        },
+        "extension": {
+          "lang": "EN",
+          "id": "GOV_10A_EXP",
+          "agencyId": "ESTAT",
+          "version": "1.0",
+          "datastructure": {
+            "id": "GOV_10A_EXP",
+            "agencyId": "ESTAT",
+            "version": "76.1"
+          },
+          "annotation": [
+            {
+              "type": "CREATED",
+              "date": "2015-02-18T08:43:09+0100"
+            },
+            {
+              "type": "DISSEMINATION_DOI_XML",
+              "title": "<adms:identifier xmlns:adms=\"http://www.w3.org/ns/adms#\" xmlns:skos=\"http://www.w3.org/2004/02/skos/core.html\" xmlns:dct=\"http://purl.org/dc/terms/\" xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"><adms:Identifier rdf:about=\"https://doi.org/10.2908/GOV_10A_EXP\"><skos:notation rdf:datatype=\"http://purl.org/spar/datacite/doi\">10.2908/GOV_10A_EXP</skos:notation><dct:creator rdf:resource=\"http://publications.europa.eu/resource/authority/corporate-body/ESTAT\"/><dct:issued rdf:datatype=\"http://www.w3.org/2001/XMLSchema#date\">2023-01-19</dct:issued></adms:Identifier></adms:identifier>"
+            },
+            {
+              "type": "DISSEMINATION_OBJECT_TYPE",
+              "title": "DATASET"
+            },
+            {
+              "type": "DISSEMINATION_TIMESTAMP_DATA",
+              "date": "2026-10-21T13:00:00+0200"
+            },
+            {
+              "type": "DISSEMINATION_TIMESTAMP_GLOBAL",
+              "date": "2026-10-21T13:00:00+0200"
+            },
+            {
+              "type": "DISSEMINATION_TIMESTAMP_PLANNED",
+              "date": "2026-10-21T12:49:54+0200"
+            },
+            {
+              "type": "ESMS_HTML",
+              "title": "Explanatory texts (metadata)",
+              "href": "https://ec.europa.eu/eurostat/cache/metadata/en/gov_10a_exp_esms.htm"
+            },
+            {
+              "type": "ESMS_SDMX",
+              "title": "Explanatory texts (metadata)",
+              "href": "https://ec.europa.eu/eurostat/api/dissemination/files?file=metadata/gov_10a_exp_esms.sdmx.zip"
+            },
+            {
+              "type": "OBS_COUNT",
+              "title": "21429240"
+            },
+            {
+              "type": "OBS_PERIOD_OVERALL_LATEST",
+              "title": "2025"
+            },
+            {
+              "type": "OBS_PERIOD_OVERALL_OLDEST",
+              "title": "1990"
+            },
+            {
+              "type": "SOURCE_INSTITUTIONS",
+              "text": "Eurostat"
+            },
+            {
+              "type": "UPDATE_DATA",
+              "date": "2026-10-21T23:00:00+0200"
+            },
+            {
+              "type": "UPDATE_STRUCTURE",
+              "date": "2026-04-22T11:00:00+0200"
+            }
+          ],
+          "status": {
+            "label": {
+              "p": "provisional"
+            }
+          },
+          "positions-with-no-data": {
+            "freq": [],
+            "unit": [],
+            "sector": [],
+            "cofog99": [],
+            "na_item": [],
+            "geo": [],
+            "time": []
+          }
+        }
+      }
+    },
+    "population": {
+      "dataset": "demo_gind",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_gind?lang=EN&geo=BE&geo=FR&geo=NL&geo=DE&geo=ES&indic_de=AVG&indic_de=JAN&sinceTimePeriod=2019&untilTimePeriod=2025",
+      "retrievedAt": "2026-11-09T21:39:58.458536+00:00",
+      "data": {
+        "version": "2.0",
+        "class": "dataset",
+        "label": "Population change - Demographic balance and crude rates at national level",
+        "source": "ESTAT",
+        "updated": "2026-10-27T23:00:00+0100",
+        "value": {
+          "0": 11488980,
+          "1": 11538604,
+          "2": 11586195,
+          "3": 11680210,
+          "4": 11779946,
+          "5": 11850296,
+          "6": 11919402,
+          "7": 83092962,
+          "8": 83160871,
+          "9": 83196078,
+          "10": 83177813,
+          "11": 83287273,
+          "12": 83516593,
+          "13": 83522129,
+          "14": 47118501,
+          "15": 47359424,
+          "16": 47443821,
+          "17": 47786102,
+          "18": 48352528,
+          "19": 48873996,
+          "20": 49359198,
+          "21": 67382061,
+          "22": 67601110,
+          "23": 67910136,
+          "24": 68263853,
+          "25": 68552653,
+          "26": 68775952,
+          "27": 68997455,
+          "28": 17344874,
+          "29": 17441500,
+          "30": 17533044,
+          "31": 17700982,
+          "32": 17877117,
+          "33": 17993485,
+          "34": 18087118,
+          "35": 11455519,
+          "36": 11522440,
+          "37": 11554767,
+          "38": 11617623,
+          "39": 11742796,
+          "40": 11817096,
+          "41": 11883495,
+          "42": 83019213,
+          "43": 83166711,
+          "44": 83155031,
+          "45": 83237124,
+          "46": 83118501,
+          "47": 83456045,
+          "48": 83577140,
+          "49": 46918951,
+          "50": 47318050,
+          "51": 47400798,
+          "52": 47486843,
+          "53": 48085361,
+          "54": 48619695,
+          "55": 49128297,
+          "56": 67290471,
+          "57": 67473651,
+          "58": 67728568,
+          "59": 68091703,
+          "60": 68436003,
+          "61": 68669303,
+          "62": 68882600,
+          "63": 17282163,
+          "64": 17407585,
+          "65": 17475415,
+          "66": 17590672,
+          "67": 17811291,
+          "68": 17942942,
+          "69": 18044027
+        },
+        "status": {
+          "6": "p",
+          "10": "b",
+          "11": "b",
+          "20": "p",
+          "25": "p",
+          "26": "p",
+          "27": "p",
+          "46": "b",
+          "61": "p",
+          "62": "p"
+        },
+        "id": [
+          "freq",
+          "indic_de",
+          "geo",
+          "time"
+        ],
+        "size": [
+          1,
+          2,
+          5,
+          7
+        ],
+        "dimension": {
+          "freq": {
+            "label": "Time frequency",
+            "category": {
+              "index": {
+                "A": 0
+              },
+              "label": {
+                "A": "Annual"
+              }
+            }
+          },
+          "indic_de": {
+            "label": "Demographic indicator",
+            "category": {
+              "index": {
+                "AVG": 0,
+                "JAN": 1
+              },
+              "label": {
+                "AVG": "Average population - total",
+                "JAN": "Population on 1 January - total"
+              }
+            }
+          },
+          "geo": {
+            "label": "Geopolitical entity (reporting)",
+            "category": {
+              "index": {
+                "BE": 0,
+                "DE": 1,
+                "ES": 2,
+                "FR": 3,
+                "NL": 4
+              },
+              "label": {
+                "BE": "Belgium",
+                "DE": "Germany",
+                "ES": "Spain",
+                "FR": "France",
+                "NL": "Netherlands"
+              }
+            }
+          },
+          "time": {
+            "label": "Time",
+            "category": {
+              "index": {
+                "2019": 0,
+                "2020": 1,
+                "2021": 2,
+                "2022": 3,
+                "2023": 4,
+                "2024": 5,
+                "2025": 6
+              },
+              "label": {
+                "2019": "2019",
+                "2020": "2020",
+                "2021": "2021",
+                "2022": "2022",
+                "2023": "2023",
+                "2024": "2024",
+                "2025": "2025"
+              }
+            }
+          }
+        },
+        "extension": {
+          "lang": "EN",
+          "id": "DEMO_GIND",
+          "agencyId": "ESTAT",
+          "version": "1.0",
+          "datastructure": {
+            "id": "DEMO_GIND",
+            "agencyId": "ESTAT",
+            "version": "35.0"
+          },
+          "annotation": [
+            {
+              "type": "CREATED",
+              "date": "2009-03-27T17:52:43+0100"
+            },
+            {
+              "type": "DISSEMINATION_DOI_XML",
+              "title": "<adms:identifier xmlns:adms=\"http://www.w3.org/ns/adms#\" xmlns:skos=\"http://www.w3.org/2004/02/skos/core.html\" xmlns:dct=\"http://purl.org/dc/terms/\" xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"><adms:Identifier rdf:about=\"https://doi.org/10.2908/DEMO_GIND\"><skos:notation rdf:datatype=\"http://purl.org/spar/datacite/doi\">10.2908/DEMO_GIND</skos:notation><dct:creator rdf:resource=\"http://publications.europa.eu/resource/authority/corporate-body/ESTAT\"/><dct:issued rdf:datatype=\"http://www.w3.org/2001/XMLSchema#date\">2023-01-19</dct:issued></adms:Identifier></adms:identifier>"
+            },
+            {
+              "type": "DISSEMINATION_OBJECT_TYPE",
+              "title": "DATASET"
+            },
+            {
+              "type": "DISSEMINATION_TIMESTAMP_DATA",
+              "date": "2026-10-27T23:00:00+0100"
+            },
+            {
+              "type": "DISSEMINATION_TIMESTAMP_GLOBAL",
+              "date": "2026-11-03T23:00:00+0100"
+            },
+            {
+              "type": "DISSEMINATION_TIMESTAMP_PLANNED",
+              "date": "2026-11-03T23:00:00+0100"
+            },
+            {
+              "type": "ESMS_HTML",
+              "title": "Explanatory texts (metadata)",
+              "href": "https://ec.europa.eu/eurostat/cache/metadata/en/demo_gind_esms.htm"
+            },
+            {
+              "type": "ESMS_SDMX",
+              "title": "Explanatory texts (metadata)",
+              "href": "https://ec.europa.eu/eurostat/api/dissemination/files?file=metadata/demo_gind_esms.sdmx.zip"
+            },
+            {
+              "type": "OBS_COUNT",
+              "title": "64769"
+            },
+            {
+              "type": "OBS_PERIOD_OVERALL_LATEST",
+              "title": "2026"
+            },
+            {
+              "type": "OBS_PERIOD_OVERALL_OLDEST",
+              "title": "1960"
+            },
+            {
+              "type": "SOURCE_INSTITUTIONS",
+              "text": "Eurostat"
+            },
+            {
+              "type": "UPDATE_DATA",
+              "date": "2026-10-27T23:00:00+0100"
+            },
+            {
+              "type": "UPDATE_STRUCTURE",
+              "date": "2026-09-30T23:00:00+0200"
+            }
+          ],
+          "status": {
+            "label": {
+              "p": "provisional",
+              "b": "break in time series"
+            }
+          },
+          "positions-with-no-data": {
+            "freq": [],
+            "indic_de": [],
+            "geo": [],
+            "time": []
+          }
+        }
+      }
+    },
+    "hicp": {
+      "dataset": "prc_hicp_aind",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hicp_aind?lang=EN&geo=BE&geo=FR&geo=NL&geo=DE&geo=ES&unit=INX_A_AVG&coicop=CP00&sinceTimePeriod=2019&untilTimePeriod=2024",
+      "retrievedAt": "2026-11-09T21:39:58.498602+00:00",
+      "data": {
+        "version": "2.0",
+        "class": "dataset",
+        "label": "HICP - annual data (average index and rate of change) (1996-2025)",
+        "source": "ESTAT",
+        "updated": "2026-02-06T23:00:00+0100",
+        "value": {
+          "0": 107.77,
+          "1": 108.23,
+          "2": 111.71,
+          "3": 123.26,
+          "4": 126.07,
+          "5": 131.52,
+          "6": 105.5,
+          "7": 105.8,
+          "8": 109.2,
+          "9": 118.7,
+          "10": 125.9,
+          "11": 129.0,
+          "12": 104.26,
+          "13": 103.91,
+          "14": 107.04,
+          "15": 115.95,
+          "16": 119.89,
+          "17": 123.33,
+          "18": 104.95,
+          "19": 105.5,
+          "20": 107.68,
+          "21": 114.04,
+          "22": 120.5,
+          "23": 123.29,
+          "24": 105.78,
+          "25": 106.96,
+          "26": 109.98,
+          "27": 122.78,
+          "28": 127.81,
+          "29": 131.92
+        },
+        "id": [
+          "freq",
+          "unit",
+          "coicop",
+          "geo",
+          "time"
+        ],
+        "size": [
+          1,
+          1,
+          1,
+          5,
+          6
+        ],
+        "dimension": {
+          "freq": {
+            "label": "Time frequency",
+            "category": {
+              "index": {
+                "A": 0
+              },
+              "label": {
+                "A": "Annual"
+              }
+            }
+          },
+          "unit": {
+            "label": "Unit of measure",
+            "category": {
+              "index": {
+                "INX_A_AVG": 0
+              },
+              "label": {
+                "INX_A_AVG": "Annual average index"
+              }
+            }
+          },
+          "coicop": {
+            "label": "Classification of individual consumption by purpose (COICOP)",
+            "category": {
+              "index": {
+                "CP00": 0
+              },
+              "label": {
+                "CP00": "All-items HICP"
+              }
+            }
+          },
+          "geo": {
+            "label": "Geopolitical entity (reporting)",
+            "category": {
+              "index": {
+                "BE": 0,
+                "DE": 1,
+                "ES": 2,
+                "FR": 3,
+                "NL": 4
+              },
+              "label": {
+                "BE": "Belgium",
+                "DE": "Germany",
+                "ES": "Spain",
+                "FR": "France",
+                "NL": "Netherlands"
+              }
+            }
+          },
+          "time": {
+            "label": "Time",
+            "category": {
+              "index": {
+                "2019": 0,
+                "2020": 1,
+                "2021": 2,
+                "2022": 3,
+                "2023": 4,
+                "2024": 5
+              },
+              "label": {
+                "2019": "2019",
+                "2020": "2020",
+                "2021": "2021",
+                "2022": "2022",
+                "2023": "2023",
+                "2024": "2024"
+              }
+            }
+          }
+        },
+        "extension": {
+          "lang": "EN",
+          "description": "<p>The Harmonised Index of Consumer Prices (HICP) measures price changes of various consumer goods and services over time (inflation). This dataset&nbsp;comprises:&nbsp;&nbsp;</p><ul><li>the average index, which is the average of the monthly HICP indices in a calendar year, and&nbsp;&nbsp;</li><li>the annual average rate of change, which is the average of the monthly consumer price indices over a calendar year compared to the average of the monthly consumer price indices over the previous calendar year</li></ul><p>Please note that this dataset is discontinued and replaced by <a href=\"https://ec.europa.eu/eurostat/databrowser/bookmark/f7a8b7e0-9b0e-4652-a82b-ad4ffc058b1b?lang=en&amp;createdAt=2026-05-20T13:25:22Z\" rel=\"noopener noreferrer\" target=\"_blank\">prc_hicp_ainr</a></p>",
+          "id": "PRC_HICP_AIND",
+          "agencyId": "ESTAT",
+          "version": "1.0",
+          "datastructure": {
+            "id": "PRC_HICP_AIND",
+            "agencyId": "ESTAT",
+            "version": "59.0"
+          },
+          "annotation": [
+            {
+              "type": "CREATED",
+              "date": "2015-11-16T10:20:47+0100"
+            },
+            {
+              "type": "DISSEMINATION_DOI_XML",
+              "title": "<adms:identifier xmlns:adms=\"http://www.w3.org/ns/adms#\" xmlns:skos=\"http://www.w3.org/2004/02/skos/core.html\" xmlns:dct=\"http://purl.org/dc/terms/\" xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"><adms:Identifier rdf:about=\"https://doi.org/10.2908/PRC_HICP_AIND\"><skos:notation rdf:datatype=\"http://purl.org/spar/datacite/doi\">10.2908/PRC_HICP_AIND</skos:notation><dct:creator rdf:resource=\"http://publications.europa.eu/resource/authority/corporate-body/ESTAT\"/><dct:issued rdf:datatype=\"http://www.w3.org/2001/XMLSchema#date\">2023-01-23</dct:issued></adms:Identifier></adms:identifier>"
+            },
+            {
+              "type": "DISSEMINATION_EXPLANATORY_LINK",
+              "title": "text-category",
+              "href": "https://ec.europa.eu/eurostat/databrowser-backend/api/public/explanatory-notes/get/Info_note_HICP_COICOP18_20260128.pdf",
+              "text": "Information note"
+            },
+            {
+              "type": "DISSEMINATION_EXPLANATORY_LINK",
+              "title": "text-category",
+              "href": "https://ec.europa.eu/eurostat/databrowser-backend/api/public/explanatory-notes/get/Info_note_HICP_COICOP18_20260128.pdf"
+            },
+            {
+              "type": "DISSEMINATION_EXPLANATORY_LINK",
+              "title": "text-category",
+              "href": "https://ec.europa.eu/eurostat/databrowser-backend/api/public/explanatory-notes/get/Info_note_HICP_COICOP18_20260128.pdf"
+            },
+            {
+              "type": "DISSEMINATION_OBJECT_TYPE",
+              "title": "DATASET"
+            },
+            {
+              "type": "DISSEMINATION_TIMESTAMP_DATA",
+              "date": "2026-02-06T23:00:00+0100"
+            },
+            {
+              "type": "DISSEMINATION_TIMESTAMP_GLOBAL",
+              "date": "2026-05-20T23:00:00+0200"
+            },
+            {
+              "type": "DISSEMINATION_TIMESTAMP_PLANNED",
+              "date": "2026-05-20T23:00:00+0200"
+            },
+            {
+              "type": "ESMS_HTML",
+              "title": "Explanatory texts (metadata)",
+              "href": "https://ec.europa.eu/eurostat/cache/metadata/en/prc_hicp_esms.htm"
+            },
+            {
+              "type": "ESMS_SDMX",
+              "title": "Explanatory texts (metadata)",
+              "href": "https://ec.europa.eu/eurostat/api/dissemination/files?file=metadata/prc_hicp_esms.sdmx.zip"
+            },
+            {
+              "type": "OBS_COUNT",
+              "title": "602162"
+            },
+            {
+              "type": "OBS_PERIOD_OVERALL_LATEST",
+              "title": "2025"
+            },
+            {
+              "type": "OBS_PERIOD_OVERALL_OLDEST",
+              "title": "1996"
+            },
+            {
+              "type": "SOURCE_INSTITUTIONS",
+              "text": "Eurostat"
+            },
+            {
+              "type": "UPDATE_DATA",
+              "date": "2026-02-06T23:00:00+0100"
+            },
+            {
+              "type": "UPDATE_STRUCTURE",
+              "date": "2026-01-19T11:00:00+0100"
+            }
+          ],
+          "positions-with-no-data": {
+            "freq": [],
+            "unit": [],
+            "coicop": [],
+            "geo": [],
+            "time": []
+          }
+        }
+      }
+    },
+    "ppp": {
+      "dataset": "prc_ppp_ind",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_ppp_ind?lang=EN&geo=BE&geo=FR&geo=NL&geo=DE&geo=ES&na_item=PPP_EU27_2020&ppp_cat=GDP&time=2024",
+      "retrievedAt": "2026-11-09T21:39:58.516967+00:00",
+      "data": {
+        "version": "2.0",
+        "class": "dataset",
+        "label": "Purchasing power parities, price level indices, nominal and real expenditures by analytical categories - based on COICOP 1999",
+        "source": "ESTAT",
+        "updated": "2025-07-10T11:00:00+0200",
+        "value": {
+          "0": 1.12256,
+          "1": 1.11676,
+          "2": 0.8972,
+          "3": 1.089,
+          "4": 1.17209
+        },
+        "id": [
+          "freq",
+          "na_item",
+          "ppp_cat",
+          "geo",
+          "time"
+        ],
+        "size": [
+          1,
+          1,
+          1,
+          5,
+          1
+        ],
+        "dimension": {
+          "freq": {
+            "label": "Time frequency",
+            "category": {
+              "index": {
+                "A": 0
+              },
+              "label": {
+                "A": "Annual"
+              }
+            }
+          },
+          "na_item": {
+            "label": "National accounts indicator (ESA 2010)",
+            "category": {
+              "index": {
+                "PPP_EU27_2020": 0
+              },
+              "label": {
+                "PPP_EU27_2020": "Purchasing power parities (EU27_2020=1)"
+              }
+            }
+          },
+          "ppp_cat": {
+            "label": "Analytical categories for purchasing power parities (PPPs) calculation",
+            "category": {
+              "index": {
+                "GDP": 0
+              },
+              "label": {
+                "GDP": "Gross domestic product"
+              }
+            }
+          },
+          "geo": {
+            "label": "Geopolitical entity (reporting)",
+            "category": {
+              "index": {
+                "BE": 0,
+                "DE": 1,
+                "ES": 2,
+                "FR": 3,
+                "NL": 4
+              },
+              "label": {
+                "BE": "Belgium",
+                "DE": "Germany",
+                "ES": "Spain",
+                "FR": "France",
+                "NL": "Netherlands"
+              }
+            }
+          },
+          "time": {
+            "label": "Time",
+            "category": {
+              "index": {
+                "2024": 0
+              },
+              "label": {
+                "2024": "2024"
+              }
+            }
+          }
+        },
+        "extension": {
+          "lang": "EN",
+          "id": "PRC_PPP_IND",
+          "agencyId": "ESTAT",
+          "version": "1.0",
+          "datastructure": {
+            "id": "PRC_PPP_IND",
+            "agencyId": "ESTAT",
+            "version": "36.0"
+          },
+          "annotation": [
+            {
+              "type": "CREATED",
+              "date": "2009-03-27T17:52:43+0100"
+            },
+            {
+              "type": "DISSEMINATION_DOI_XML",
+              "title": "<adms:identifier xmlns:adms=\"http://www.w3.org/ns/adms#\" xmlns:skos=\"http://www.w3.org/2004/02/skos/core.html\" xmlns:dct=\"http://purl.org/dc/terms/\" xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"><adms:Identifier rdf:about=\"https://doi.org/10.2908/PRC_PPP_IND\"><skos:notation rdf:datatype=\"http://purl.org/spar/datacite/doi\">10.2908/PRC_PPP_IND</skos:notation><dct:creator rdf:resource=\"http://publications.europa.eu/resource/authority/corporate-body/ESTAT\"/><dct:issued rdf:datatype=\"http://www.w3.org/2001/XMLSchema#date\">2023-01-19</dct:issued></adms:Identifier></adms:identifier>"
+            },
+            {
+              "type": "DISSEMINATION_OBJECT_TYPE",
+              "title": "DATASET"
+            },
+            {
+              "type": "DISSEMINATION_TIMESTAMP_DATA",
+              "date": "2025-07-10T11:00:00+0200"
+            },
+            {
+              "type": "DISSEMINATION_TIMESTAMP_GLOBAL",
+              "date": "2026-04-20T23:00:00+0200"
+            },
+            {
+              "type": "DISSEMINATION_TIMESTAMP_PLANNED",
+              "date": "2026-04-20T23:00:00+0200"
+            },
+            {
+              "type": "ESMS_HTML",
+              "title": "Explanatory texts (metadata)",
+              "href": "https://ec.europa.eu/eurostat/cache/metadata/en/prc_ppp_ind_esms.htm"
+            },
+            {
+              "type": "ESMS_SDMX",
+              "title": "Explanatory texts (metadata)",
+              "href": "https://ec.europa.eu/eurostat/api/dissemination/files?file=metadata/prc_ppp_ind_esms.sdmx.zip"
+            },
+            {
+              "type": "OBS_COUNT",
+              "title": "1401572"
+            },
+            {
+              "type": "OBS_PERIOD_OVERALL_LATEST",
+              "title": "2024"
+            },
+            {
+              "type": "OBS_PERIOD_OVERALL_OLDEST",
+              "title": "1995"
+            },
+            {
+              "type": "SOURCE_INSTITUTIONS",
+              "text": "Eurostat"
+            },
+            {
+              "type": "UPDATE_DATA",
+              "date": "2025-07-10T11:00:00+0200"
+            },
+            {
+              "type": "UPDATE_STRUCTURE",
+              "date": "2025-03-27T11:00:00+0100"
+            }
+          ],
+          "positions-with-no-data": {
+            "freq": [],
+            "na_item": [],
+            "ppp_cat": [],
+            "geo": [],
+            "time": []
+          }
+        }
+      }
+    },
+    "age": {
+      "dataset": "demo_pjanind",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_pjanind?lang=EN&geo=BE&geo=FR&geo=NL&geo=DE&geo=ES&indic_de=PC_Y65_MAX&time=2024",
+      "retrievedAt": "2026-11-09T21:39:58.795979+00:00",
+      "data": {
+        "version": "2.0",
+        "class": "dataset",
+        "label": "Population structure indicators at national level",
+        "source": "ESTAT",
+        "updated": "2026-09-25T23:00:00+0200",
+        "value": {
+          "0": 19.9,
+          "1": 22.4,
+          "2": 20.4,
+          "3": 21.5,
+          "4": 20.5
+        },
+        "status": {
+          "3": "p"
+        },
+        "id": [
+          "freq",
+          "indic_de",
+          "geo",
+          "time"
+        ],
+        "size": [
+          1,
+          1,
+          5,
+          1
+        ],
+        "dimension": {
+          "freq": {
+            "label": "Time frequency",
+            "category": {
+              "index": {
+                "A": 0
+              },
+              "label": {
+                "A": "Annual"
+              }
+            }
+          },
+          "indic_de": {
+            "label": "Demographic indicator",
+            "category": {
+              "index": {
+                "PC_Y65_MAX": 0
+              },
+              "label": {
+                "PC_Y65_MAX": "Proportion of population aged 65 years and more"
+              }
+            }
+          },
+          "geo": {
+            "label": "Geopolitical entity (reporting)",
+            "category": {
+              "index": {
+                "BE": 0,
+                "DE": 1,
+                "ES": 2,
+                "FR": 3,
+                "NL": 4
+              },
+              "label": {
+                "BE": "Belgium",
+                "DE": "Germany",
+                "ES": "Spain",
+                "FR": "France",
+                "NL": "Netherlands"
+              }
+            }
+          },
+          "time": {
+            "label": "Time",
+            "category": {
+              "index": {
+                "2024": 0
+              },
+              "label": {
+                "2024": "2024"
+              }
+            }
+          }
+        },
+        "extension": {
+          "lang": "EN",
+          "id": "DEMO_PJANIND",
+          "agencyId": "ESTAT",
+          "version": "1.0",
+          "datastructure": {
+            "id": "DEMO_PJANIND",
+            "agencyId": "ESTAT",
+            "version": "34.0"
+          },
+          "annotation": [
+            {
+              "type": "CREATED",
+              "date": "2009-03-27T17:52:43+0100"
+            },
+            {
+              "type": "DISSEMINATION_DOI_XML",
+              "title": "<adms:identifier xmlns:adms=\"http://www.w3.org/ns/adms#\" xmlns:skos=\"http://www.w3.org/2004/02/skos/core.html\" xmlns:dct=\"http://purl.org/dc/terms/\" xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"><adms:Identifier rdf:about=\"https://doi.org/10.2908/DEMO_PJANIND\"><skos:notation rdf:datatype=\"http://purl.org/spar/datacite/doi\">10.2908/DEMO_PJANIND</skos:notation><dct:creator rdf:resource=\"http://publications.europa.eu/resource/authority/corporate-body/ESTAT\"/><dct:issued rdf:datatype=\"http://www.w3.org/2001/XMLSchema#date\">2023-01-19</dct:issued></adms:Identifier></adms:identifier>"
+            },
+            {
+              "type": "DISSEMINATION_OBJECT_TYPE",
+              "title": "DATASET"
+            },
+            {
+              "type": "DISSEMINATION_TIMESTAMP_DATA",
+              "date": "2026-09-25T23:00:00+0200"
+            },
+            {
+              "type": "DISSEMINATION_TIMESTAMP_GLOBAL",
+              "date": "2026-09-25T23:00:00+0200"
+            },
+            {
+              "type": "DISSEMINATION_TIMESTAMP_PLANNED",
+              "date": "2026-09-25T23:00:00+0200"
+            },
+            {
+              "type": "ESMS_HTML",
+              "title": "Explanatory texts (metadata)",
+              "href": "https://ec.europa.eu/eurostat/cache/metadata/en/demo_pop_esms.htm"
+            },
+            {
+              "type": "ESMS_SDMX",
+              "title": "Explanatory texts (metadata)",
+              "href": "https://ec.europa.eu/eurostat/api/dissemination/files?file=metadata/demo_pop_esms.sdmx.zip"
+            },
+            {
+              "type": "OBS_COUNT",
+              "title": "120545"
+            },
+            {
+              "type": "OBS_PERIOD_OVERALL_LATEST",
+              "title": "2025"
+            },
+            {
+              "type": "OBS_PERIOD_OVERALL_OLDEST",
+              "title": "1960"
+            },
+            {
+              "type": "SOURCE_INSTITUTIONS",
+              "text": "Eurostat"
+            },
+            {
+              "type": "UPDATE_DATA",
+              "date": "2026-09-25T23:00:00+0200"
+            },
+            {
+              "type": "UPDATE_STRUCTURE",
+              "date": "2026-02-13T11:00:00+0100"
+            }
+          ],
+          "status": {
+            "label": {
+              "p": "provisional"
+            }
+          },
+          "positions-with-no-data": {
+            "freq": [],
+            "indic_de": [],
+            "geo": [],
+            "time": []
+          }
+        }
+      }
+    },
+    "employment": {
+      "dataset": "lfsi_emp_a",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfsi_emp_a?lang=EN&geo=BE&geo=FR&geo=NL&geo=DE&geo=ES&indic_em=EMP_LFS&sex=T&age=Y20-64&unit=PC_POP&time=2024",
+      "retrievedAt": "2026-11-09T21:39:58.841342+00:00",
+      "data": {
+        "version": "2.0",
+        "class": "dataset",
+        "label": "Employment and labour force by sex and age - annual data",
+        "source": "ESTAT",
+        "updated": "2026-11-06T23:00:00+0100",
+        "value": {
+          "0": 72.3,
+          "1": 81.1,
+          "2": 71.4,
+          "3": 75.0,
+          "4": 83.5
+        },
+        "status": {
+          "2": "d",
+          "3": "d"
+        },
+        "id": [
+          "freq",
+          "indic_em",
+          "sex",
+          "age",
+          "unit",
+          "geo",
+          "time"
+        ],
+        "size": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          5,
+          1
+        ],
+        "dimension": {
+          "freq": {
+            "label": "Time frequency",
+            "category": {
+              "index": {
+                "A": 0
+              },
+              "label": {
+                "A": "Annual"
+              }
+            }
+          },
+          "indic_em": {
+            "label": "Employment indicator",
+            "category": {
+              "index": {
+                "EMP_LFS": 0
+              },
+              "label": {
+                "EMP_LFS": "Total employment (resident population concept - LFS)"
+              }
+            }
+          },
+          "sex": {
+            "label": "Sex",
+            "category": {
+              "index": {
+                "T": 0
+              },
+              "label": {
+                "T": "Total"
+              }
+            }
+          },
+          "age": {
+            "label": "Age class",
+            "category": {
+              "index": {
+                "Y20-64": 0
+              },
+              "label": {
+                "Y20-64": "From 20 to 64 years"
+              }
+            }
+          },
+          "unit": {
+            "label": "Unit of measure",
+            "category": {
+              "index": {
+                "PC_POP": 0
+              },
+              "label": {
+                "PC_POP": "Percentage of total population"
+              }
+            }
+          },
+          "geo": {
+            "label": "Geopolitical entity (reporting)",
+            "category": {
+              "index": {
+                "BE": 0,
+                "DE": 1,
+                "ES": 2,
+                "FR": 3,
+                "NL": 4
+              },
+              "label": {
+                "BE": "Belgium",
+                "DE": "Germany",
+                "ES": "Spain",
+                "FR": "France",
+                "NL": "Netherlands"
+              }
+            }
+          },
+          "time": {
+            "label": "Time",
+            "category": {
+              "index": {
+                "2024": 0
+              },
+              "label": {
+                "2024": "2024"
+              }
+            }
+          }
+        },
+        "extension": {
+          "lang": "EN",
+          "id": "LFSI_EMP_A",
+          "agencyId": "ESTAT",
+          "version": "1.0",
+          "datastructure": {
+            "id": "LFSI_EMP_A",
+            "agencyId": "ESTAT",
+            "version": "50.0"
+          },
+          "annotation": [
+            {
+              "type": "CREATED",
+              "date": "2021-07-14T13:09:27+0200"
+            },
+            {
+              "type": "DISSEMINATION_DOI_XML",
+              "title": "<adms:identifier xmlns:adms=\"http://www.w3.org/ns/adms#\" xmlns:skos=\"http://www.w3.org/2004/02/skos/core.html\" xmlns:dct=\"http://purl.org/dc/terms/\" xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"><adms:Identifier rdf:about=\"https://doi.org/10.2908/LFSI_EMP_A\"><skos:notation rdf:datatype=\"http://purl.org/spar/datacite/doi\">10.2908/LFSI_EMP_A</skos:notation><dct:creator rdf:resource=\"http://publications.europa.eu/resource/authority/corporate-body/ESTAT\"/><dct:issued rdf:datatype=\"http://www.w3.org/2001/XMLSchema#date\">2023-01-19</dct:issued></adms:Identifier></adms:identifier>"
+            },
+            {
+              "type": "DISSEMINATION_EXPLANATORY_LINK",
+              "title": "text-category",
+              "href": "https://ec.europa.eu/eurostat/databrowser-backend/api/public/explanatory-notes/get/Info_note_LFSQ_20240604.pdf"
+            },
+            {
+              "type": "DISSEMINATION_EXPLANATORY_LINK",
+              "title": "text-category",
+              "href": "https://ec.europa.eu/eurostat/databrowser-backend/api/public/explanatory-notes/get/Info_note_LFSQ_20240604.pdf"
+            },
+            {
+              "type": "DISSEMINATION_EXPLANATORY_LINK",
+              "title": "text-category",
+              "href": "https://ec.europa.eu/eurostat/databrowser-backend/api/public/explanatory-notes/get/Info_note_LFSQ_20240604.pdf",
+              "text": "Information note"
+            },
+            {
+              "type": "DISSEMINATION_OBJECT_TYPE",
+              "title": "DATASET"
+            },
+            {
+              "type": "DISSEMINATION_TIMESTAMP_DATA",
+              "date": "2026-11-06T23:00:00+0100"
+            },
+            {
+              "type": "DISSEMINATION_TIMESTAMP_GLOBAL",
+              "date": "2026-11-06T23:00:00+0100"
+            },
+            {
+              "type": "DISSEMINATION_TIMESTAMP_PLANNED",
+              "date": "2026-11-06T23:00:00+0100"
+            },
+            {
+              "type": "ESMS_HTML",
+              "title": "Explanatory texts (metadata)",
+              "href": "https://ec.europa.eu/eurostat/cache/metadata/en/lfsi_esms.htm"
+            },
+            {
+              "type": "ESMS_SDMX",
+              "title": "Explanatory texts (metadata)",
+              "href": "https://ec.europa.eu/eurostat/api/dissemination/files?file=metadata/lfsi_esms.sdmx.zip"
+            },
+            {
+              "type": "OBS_COUNT",
+              "title": "44400"
+            },
+            {
+              "type": "OBS_PERIOD_OVERALL_LATEST",
+              "title": "2025"
+            },
+            {
+              "type": "OBS_PERIOD_OVERALL_OLDEST",
+              "title": "2003"
+            },
+            {
+              "type": "SOURCE_INSTITUTIONS",
+              "text": "Eurostat"
+            },
+            {
+              "type": "UPDATE_DATA",
+              "date": "2026-11-06T23:00:00+0100"
+            },
+            {
+              "type": "UPDATE_STRUCTURE",
+              "date": "2026-11-06T23:00:00+0100"
+            }
+          ],
+          "status": {
+            "label": {
+              "d": "definition differs (see metadata)"
+            }
+          },
+          "positions-with-no-data": {
+            "freq": [],
+            "indic_em": [],
+            "sex": [],
+            "age": [],
+            "unit": [],
+            "geo": [],
+            "time": []
+          }
+        }
+      }
+    },
+    "care": {
+      "dataset": "sdg_03_60",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/sdg_03_60?lang=EN&geo=BE&geo=FR&geo=NL&geo=DE&geo=ES&sex=T&time=2024",
+      "retrievedAt": "2026-11-09T21:39:58.831400+00:00",
+      "data": {
+        "version": "2.0",
+        "class": "dataset",
+        "label": "Self-reported unmet need for medical examination and care by sex",
+        "source": "ESTAT",
+        "updated": "2026-10-20T23:00:00+0200",
+        "value": {
+          "0": 1.4,
+          "1": 0.8,
+          "2": 1.8,
+          "3": 4.1,
+          "4": 0.6
+        },
+        "id": [
+          "freq",
+          "age",
+          "sex",
+          "reason",
+          "unit",
+          "quant_inc",
+          "geo",
+          "time"
+        ],
+        "size": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          5,
+          1
+        ],
+        "dimension": {
+          "freq": {
+            "label": "Time frequency",
+            "category": {
+              "index": {
+                "A": 0
+              },
+              "label": {
+                "A": "Annual"
+              }
+            }
+          },
+          "age": {
+            "label": "Age class",
+            "category": {
+              "index": {
+                "Y_GE16": 0
+              },
+              "label": {
+                "Y_GE16": "16 years or over"
+              }
+            }
+          },
+          "sex": {
+            "label": "Sex",
+            "category": {
+              "index": {
+                "T": 0
+              },
+              "label": {
+                "T": "Total"
+              }
+            }
+          },
+          "reason": {
+            "label": "Reason",
+            "category": {
+              "index": {
+                "TXP_TFAR_WLIST": 0
+              },
+              "label": {
+                "TXP_TFAR_WLIST": "Too expensive or too far or waiting list"
+              }
+            }
+          },
+          "unit": {
+            "label": "Unit of measure",
+            "category": {
+              "index": {
+                "PC": 0
+              },
+              "label": {
+                "PC": "Percentage"
+              }
+            }
+          },
+          "quant_inc": {
+            "label": "Income quantile",
+            "category": {
+              "index": {
+                "TOTAL": 0
+              },
+              "label": {
+                "TOTAL": "Total"
+              }
+            }
+          },
+          "geo": {
+            "label": "Geopolitical entity (reporting)",
+            "category": {
+              "index": {
+                "BE": 0,
+                "DE": 1,
+                "ES": 2,
+                "FR": 3,
+                "NL": 4
+              },
+              "label": {
+                "BE": "Belgium",
+                "DE": "Germany",
+                "ES": "Spain",
+                "FR": "France",
+                "NL": "Netherlands"
+              }
+            }
+          },
+          "time": {
+            "label": "Time",
+            "category": {
+              "index": {
+                "2024": 0
+              },
+              "label": {
+                "2024": "2024"
+              }
+            }
+          }
+        },
+        "extension": {
+          "lang": "EN",
+          "description": "This indicator measures the share of the population aged 16 and over reporting unmet needs for medical care due to one of the following reasons: ‘financial reasons’, ‘waiting list’ and ‘too far to travel’. Self-reported unmet needs concern a person’s own assessment of whether they needed medical examination or treatment (dental care excluded) but did not have it or did not seek it. Since social norms and expectations may affect responses to questions about unmet care needs, caution is required when comparing differences in the reporting of unmet medical examination across countries. In addition, the different organisation of health care services is another factor to consider when analysing the data. Finally, there are also some variations in the survey questions across countries and across time. The data stem from the EU Statistics on Income and Living Conditions (EU-SILC).",
+          "id": "SDG_03_60",
+          "agencyId": "ESTAT",
+          "version": "1.0",
+          "datastructure": {
+            "id": "SDG_03_60",
+            "agencyId": "ESTAT",
+            "version": "89.0"
+          },
+          "annotation": [
+            {
+              "type": "CREATED",
+              "date": "2017-11-06T15:11:39+0100"
+            },
+            {
+              "type": "DISSEMINATION_DOI_XML",
+              "title": "<adms:identifier xmlns:adms=\"http://www.w3.org/ns/adms#\" xmlns:skos=\"http://www.w3.org/2004/02/skos/core.html\" xmlns:dct=\"http://purl.org/dc/terms/\" xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"><adms:Identifier rdf:about=\"https://doi.org/10.2908/SDG_03_60\"><skos:notation rdf:datatype=\"http://purl.org/spar/datacite/doi\">10.2908/SDG_03_60</skos:notation><dct:creator rdf:resource=\"http://publications.europa.eu/resource/authority/corporate-body/ESTAT\"/><dct:issued rdf:datatype=\"http://www.w3.org/2001/XMLSchema#date\">2023-01-19</dct:issued></adms:Identifier></adms:identifier>"
+            },
+            {
+              "type": "DISSEMINATION_EXPLANATORY_LINK",
+              "title": "text-category",
+              "href": "https://ec.europa.eu/eurostat/databrowser-backend/api/public/explanatory-notes/get/Info_note_SDG_20261015.pdf",
+              "text": "Information note"
+            },
+            {
+              "type": "DISSEMINATION_EXPLANATORY_LINK",
+              "title": "text-category",
+              "href": "https://ec.europa.eu/eurostat/databrowser-backend/api/public/explanatory-notes/get/Info_note_SDG_20261015.pdf"
+            },
+            {
+              "type": "DISSEMINATION_EXPLANATORY_LINK",
+              "title": "text-category",
+              "href": "https://ec.europa.eu/eurostat/databrowser-backend/api/public/explanatory-notes/get/Info_note_SDG_20261015.pdf"
+            },
+            {
+              "type": "DISSEMINATION_OBJECT_TYPE",
+              "title": "DATASET"
+            },
+            {
+              "type": "DISSEMINATION_PRESENTATIONS",
+              "title": "[{\"names\":{\"de\":{\"locale\":\"de\",\"value\":\"Standardpräsentation\",\"html\":false},\"en\":{\"locale\":\"en\",\"value\":\"Default presentation\",\"html\":false},\"fr\":{\"locale\":\"fr\",\"value\":\"Présentation par défaut\",\"html\":false}},\"descriptions\":{},\"code\":\"default\",\"useAsDefault\":true,\"order\":0,\"defaultView\":\"view.table\",\"jsonFormat\":null,\"preselection\":[{\"code\":\"freq\",\"multipleSelection\":null,\"singleSelection\":\"A\"},{\"code\":\"age\",\"multipleSelection\":null,\"singleSelection\":\"Y_GE16\"},{\"code\":\"sex\",\"multipleSelection\":null,\"singleSelection\":null},{\"code\":\"reason\",\"multipleSelection\":null,\"singleSelection\":\"TXP_TFAR_WLIST\"},{\"code\":\"unit\",\"multipleSelection\":null,\"singleSelection\":\"PC\"},{\"code\":\"quant_inc\",\"multipleSelection\":null,\"singleSelection\":\"TOTAL\"},{\"code\":\"geo\",\"multipleSelection\":null,\"singleSelection\":null}],\"preselectionTimeFilter\":{\"code\":\"time\",\"multipleSelection\":null,\"singleSelection\":null,\"mode\":\"ALL\",\"from\":null,\"to\":null,\"fixed\":null},\"layoutFormat\":{\"layoutAxes\":{\"y1\":\"time\",\"x1\":\"geo\"},\"fixedMinMax\":false,\"mapProjection\":null,\"mapShowAllGeo\":true,\"mapNumberOfColors\":0,\"rankingMode\":false,\"highlightMode\":false,\"labelOption\":null,\"labelByDimension\":null,\"businessRulesStrategy\":null,\"mapClassificartionMethode\":null}}]"
+            },
+            {
+              "type": "DISSEMINATION_PRESENTATIONS_VERSION",
+              "title": "v0_4_X"
+            },
+            {
+              "type": "DISSEMINATION_SOURCE_DATASET",
+              "title": "HLTH_SILC_08"
+            },
+            {
+              "type": "DISSEMINATION_TIMESTAMP_DATA",
+              "date": "2026-10-20T23:00:00+0200"
+            },
+            {
+              "type": "DISSEMINATION_TIMESTAMP_GLOBAL",
+              "date": "2026-10-20T23:00:00+0200"
+            },
+            {
+              "type": "DISSEMINATION_TIMESTAMP_PLANNED",
+              "date": "2026-10-20T23:00:00+0200"
+            },
+            {
+              "type": "ESMS_HTML",
+              "title": "Explanatory texts (metadata)",
+              "href": "https://ec.europa.eu/eurostat/cache/metadata/en/sdg_03_60_esmsip2.htm"
+            },
+            {
+              "type": "ESMS_SDMX",
+              "title": "Explanatory texts (metadata)",
+              "href": "https://ec.europa.eu/eurostat/api/dissemination/files?file=metadata/sdg_03_60_esmsip2.sdmx.zip"
+            },
+            {
+              "type": "OBS_COUNT",
+              "title": "2040"
+            },
+            {
+              "type": "OBS_PERIOD_OVERALL_LATEST",
+              "title": "2025"
+            },
+            {
+              "type": "OBS_PERIOD_OVERALL_OLDEST",
+              "title": "2008"
+            },
+            {
+              "type": "SOURCE_INSTITUTIONS",
+              "text": "Eurostat"
+            },
+            {
+              "type": "UPDATE_DATA",
+              "date": "2026-10-20T23:00:00+0200"
+            },
+            {
+              "type": "UPDATE_STRUCTURE",
+              "date": "2026-07-27T23:00:00+0200"
+            }
+          ],
+          "positions-with-no-data": {
+            "freq": [],
+            "age": [],
+            "sex": [],
+            "reason": [],
+            "unit": [],
+            "quant_inc": [],
+            "geo": [],
+            "time": []
+          }
+        }
+      }
+    },
+    "density": {
+      "dataset": "demo_r_d3dens",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_r_d3dens?lang=EN&geo=BE&geo=FR&geo=NL&geo=DE&geo=ES&time=2024",
+      "retrievedAt": "2026-11-09T21:40:01.278263+00:00",
+      "data": {
+        "version": "2.0",
+        "class": "dataset",
+        "label": "Population density by NUTS 3 region",
+        "source": "ESTAT",
+        "updated": "2026-02-25T23:00:00+0100",
+        "value": {
+          "0": 389.1,
+          "1": 236.4,
+          "2": 97.2,
+          "3": 108.5,
+          "4": 529.5
+        },
+        "status": {
+          "3": "p"
+        },
+        "id": [
+          "freq",
+          "unit",
+          "geo",
+          "time"
+        ],
+        "size": [
+          1,
+          1,
+          5,
+          1
+        ],
+        "dimension": {
+          "freq": {
+            "label": "Time frequency",
+            "category": {
+              "index": {
+                "A": 0
+              },
+              "label": {
+                "A": "Annual"
+              }
+            }
+          },
+          "unit": {
+            "label": "Unit of measure",
+            "category": {
+              "index": {
+                "PER_KM2": 0
+              },
+              "label": {
+                "PER_KM2": "Persons per square kilometre"
+              }
+            }
+          },
+          "geo": {
+            "label": "Geopolitical entity (reporting)",
+            "category": {
+              "index": {
+                "BE": 0,
+                "DE": 1,
+                "ES": 2,
+                "FR": 3,
+                "NL": 4
+              },
+              "label": {
+                "BE": "Belgium",
+                "DE": "Germany",
+                "ES": "Spain",
+                "FR": "France",
+                "NL": "Netherlands"
+              }
+            }
+          },
+          "time": {
+            "label": "Time",
+            "category": {
+              "index": {
+                "2024": 0
+              },
+              "label": {
+                "2024": "2024"
+              }
+            }
+          }
+        },
+        "extension": {
+          "lang": "EN",
+          "id": "DEMO_R_D3DENS",
+          "agencyId": "ESTAT",
+          "version": "1.0",
+          "datastructure": {
+            "id": "DEMO_R_D3DENS",
+            "agencyId": "ESTAT",
+            "version": "33.0"
+          },
+          "annotation": [
+            {
+              "type": "CREATED",
+              "date": "2013-03-19T17:09:24+0100"
+            },
+            {
+              "type": "DISSEMINATION_DOI_XML",
+              "title": "<adms:identifier xmlns:adms=\"http://www.w3.org/ns/adms#\" xmlns:skos=\"http://www.w3.org/2004/02/skos/core.html\" xmlns:dct=\"http://purl.org/dc/terms/\" xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"><adms:Identifier rdf:about=\"https://doi.org/10.2908/DEMO_R_D3DENS\"><skos:notation rdf:datatype=\"http://purl.org/spar/datacite/doi\">10.2908/DEMO_R_D3DENS</skos:notation><dct:creator rdf:resource=\"http://publications.europa.eu/resource/authority/corporate-body/ESTAT\"/><dct:issued rdf:datatype=\"http://www.w3.org/2001/XMLSchema#date\">2023-01-19</dct:issued></adms:Identifier></adms:identifier>"
+            },
+            {
+              "type": "DISSEMINATION_OBJECT_TYPE",
+              "title": "DATASET"
+            },
+            {
+              "type": "DISSEMINATION_TIMESTAMP_DATA",
+              "date": "2026-02-25T23:00:00+0100"
+            },
+            {
+              "type": "DISSEMINATION_TIMESTAMP_GLOBAL",
+              "date": "2026-02-25T23:00:00+0100"
+            },
+            {
+              "type": "DISSEMINATION_TIMESTAMP_PLANNED",
+              "date": "2026-02-25T23:00:00+0100"
+            },
+            {
+              "type": "ESMS_HTML",
+              "title": "Explanatory texts (metadata)",
+              "href": "https://ec.europa.eu/eurostat/cache/metadata/en/demo_r_gind3_esms.htm"
+            },
+            {
+              "type": "ESMS_SDMX",
+              "title": "Explanatory texts (metadata)",
+              "href": "https://ec.europa.eu/eurostat/api/dissemination/files?file=metadata/demo_r_gind3_esms.sdmx.zip"
+            },
+            {
+              "type": "OBS_COUNT",
+              "title": "57129"
+            },
+            {
+              "type": "OBS_PERIOD_OVERALL_LATEST",
+              "title": "2024"
+            },
+            {
+              "type": "OBS_PERIOD_OVERALL_OLDEST",
+              "title": "1990"
+            },
+            {
+              "type": "SOURCE_INSTITUTIONS",
+              "text": "Eurostat"
+            },
+            {
+              "type": "UPDATE_DATA",
+              "date": "2026-02-25T23:00:00+0100"
+            },
+            {
+              "type": "UPDATE_STRUCTURE",
+              "date": "2026-02-25T23:00:00+0100"
+            }
+          ],
+          "status": {
+            "label": {
+              "p": "provisional"
+            }
+          },
+          "positions-with-no-data": {
+            "freq": [],
+            "unit": [],
+            "geo": [],
+            "time": []
+          }
+        }
+      }
+    },
+    "life": {
+      "dataset": "demo_mlexpec",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_mlexpec?lang=EN&geo=BE&geo=FR&geo=NL&geo=DE&geo=ES&sex=T&age=Y_LT1&time=2024",
+      "retrievedAt": "2026-11-09T21:39:59.219664+00:00",
+      "data": {
+        "version": "2.0",
+        "class": "dataset",
+        "label": "Life expectancy by age and sex",
+        "source": "ESTAT",
+        "updated": "2026-09-25T23:00:00+0200",
+        "value": {
+          "0": 82.4,
+          "1": 81.2,
+          "2": 84.0,
+          "3": 83.0,
+          "4": 81.9
+        },
+        "status": {
+          "3": "p"
+        },
+        "id": [
+          "freq",
+          "unit",
+          "sex",
+          "age",
+          "geo",
+          "time"
+        ],
+        "size": [
+          1,
+          1,
+          1,
+          1,
+          5,
+          1
+        ],
+        "dimension": {
+          "freq": {
+            "label": "Time frequency",
+            "category": {
+              "index": {
+                "A": 0
+              },
+              "label": {
+                "A": "Annual"
+              }
+            }
+          },
+          "unit": {
+            "label": "Unit of measure",
+            "category": {
+              "index": {
+                "YR": 0
+              },
+              "label": {
+                "YR": "Year"
+              }
+            }
+          },
+          "sex": {
+            "label": "Sex",
+            "category": {
+              "index": {
+                "T": 0
+              },
+              "label": {
+                "T": "Total"
+              }
+            }
+          },
+          "age": {
+            "label": "Age class",
+            "category": {
+              "index": {
+                "Y_LT1": 0
+              },
+              "label": {
+                "Y_LT1": "Less than 1 year"
+              }
+            }
+          },
+          "geo": {
+            "label": "Geopolitical entity (reporting)",
+            "category": {
+              "index": {
+                "BE": 0,
+                "DE": 1,
+                "ES": 2,
+                "FR": 3,
+                "NL": 4
+              },
+              "label": {
+                "BE": "Belgium",
+                "DE": "Germany",
+                "ES": "Spain",
+                "FR": "France",
+                "NL": "Netherlands"
+              }
+            }
+          },
+          "time": {
+            "label": "Time",
+            "category": {
+              "index": {
+                "2024": 0
+              },
+              "label": {
+                "2024": "2024"
+              }
+            }
+          }
+        },
+        "extension": {
+          "lang": "EN",
+          "id": "DEMO_MLEXPEC",
+          "agencyId": "ESTAT",
+          "version": "1.0",
+          "datastructure": {
+            "id": "DEMO_MLEXPEC",
+            "agencyId": "ESTAT",
+            "version": "53.0"
+          },
+          "annotation": [
+            {
+              "type": "CREATED",
+              "date": "2009-03-27T17:52:43+0100"
+            },
+            {
+              "type": "DISSEMINATION_DOI_XML",
+              "title": "<adms:identifier xmlns:adms=\"http://www.w3.org/ns/adms#\" xmlns:skos=\"http://www.w3.org/2004/02/skos/core.html\" xmlns:dct=\"http://purl.org/dc/terms/\" xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"><adms:Identifier rdf:about=\"https://doi.org/10.2908/DEMO_MLEXPEC\"><skos:notation rdf:datatype=\"http://purl.org/spar/datacite/doi\">10.2908/DEMO_MLEXPEC</skos:notation><dct:creator rdf:resource=\"http://publications.europa.eu/resource/authority/corporate-body/ESTAT\"/><dct:issued rdf:datatype=\"http://www.w3.org/2001/XMLSchema#date\">2023-01-23</dct:issued></adms:Identifier></adms:identifier>"
+            },
+            {
+              "type": "DISSEMINATION_OBJECT_TYPE",
+              "title": "DATASET"
+            },
+            {
+              "type": "DISSEMINATION_TIMESTAMP_DATA",
+              "date": "2026-09-25T23:00:00+0200"
+            },
+            {
+              "type": "DISSEMINATION_TIMESTAMP_GLOBAL",
+              "date": "2026-09-25T23:00:00+0200"
+            },
+            {
+              "type": "DISSEMINATION_TIMESTAMP_PLANNED",
+              "date": "2026-09-25T23:00:00+0200"
+            },
+            {
+              "type": "ESMS_HTML",
+              "title": "Explanatory texts (metadata)",
+              "href": "https://ec.europa.eu/eurostat/cache/metadata/en/demo_mor_esms.htm"
+            },
+            {
+              "type": "ESMS_SDMX",
+              "title": "Explanatory texts (metadata)",
+              "href": "https://ec.europa.eu/eurostat/api/dissemination/files?file=metadata/demo_mor_esms.sdmx.zip"
+            },
+            {
+              "type": "OBS_COUNT",
+              "title": "522120"
+            },
+            {
+              "type": "OBS_PERIOD_OVERALL_LATEST",
+              "title": "2024"
+            },
+            {
+              "type": "OBS_PERIOD_OVERALL_OLDEST",
+              "title": "1960"
+            },
+            {
+              "type": "SOURCE_INSTITUTIONS",
+              "text": "Eurostat"
+            },
+            {
+              "type": "UPDATE_DATA",
+              "date": "2026-09-25T23:00:00+0200"
+            },
+            {
+              "type": "UPDATE_STRUCTURE",
+              "date": "2026-09-23T23:00:00+0200"
+            }
+          ],
+          "status": {
+            "label": {
+              "p": "provisional"
+            }
+          },
+          "positions-with-no-data": {
+            "freq": [],
+            "unit": [],
+            "sex": [],
+            "age": [],
+            "geo": [],
+            "time": []
+          }
+        }
+      }
+    }
+  },
+  "pisa": {
+    "year": 2022,
+    "sourceLabel": "OESO · PISA 2022 Results, Volume I",
+    "url": "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/overview-of-performance-trends_ae540546.html",
+    "values": {
+      "BE": {
+        "mathematics": 489,
+        "reading": 479,
+        "science": 491
+      },
+      "FR": {
+        "mathematics": 474,
+        "reading": 474,
+        "science": 487
+      },
+      "NL": {
+        "mathematics": 493,
+        "reading": 459,
+        "science": 488
+      },
+      "DE": {
+        "mathematics": 475,
+        "reading": 480,
+        "science": 492
+      },
+      "ES": {
+        "mathematics": 473,
+        "reading": 474,
+        "science": 485
+      }
+    },
+    "caveat": "Afgeronde gemiddelde scores voor 15-jarige leerlingen. Voor Nederland waarschuwt de OESO voor afwijkingen van de steekproefnormen. Verschillen hebben onzekerheidsmarges; dit is geen ranglijst van de efficiëntie van onderwijsuitgaven."
+  }
+}

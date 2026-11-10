@@ -1,0 +1,649 @@
+// Belgische Staatsrekening — generic statistical observation platform
+// See docs/DATA_ARCHITECTURE.md for the rationale behind this design.
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ============================================================
+// ENTITY REGISTRY
+// ============================================================
+
+enum GovernmentEntityType {
+  COUNTRY
+  GENERAL_GOVERNMENT
+  FEDERAL_GOVERNMENT
+  COMMUNITY
+  REGION
+  COMMUNITY_REGION
+  SOCIAL_SECURITY
+  PROVINCE
+  MUNICIPALITY
+  CPAS_OCMW
+  DISTRICT
+  INTERCOMMUNAL
+  PUBLIC_AGENCY
+  OTHER
+}
+
+model GovernmentEntity {
+  id          String               @id @default(uuid())
+  slug        String               @unique
+  name        String
+  officialName String?
+  shortName   String?
+  entityType  GovernmentEntityType
+
+  parentId    String?
+  parent      GovernmentEntity?    @relation("EntityHierarchy", fields: [parentId], references: [id])
+  children    GovernmentEntity[]   @relation("EntityHierarchy")
+
+  countryCode String               @default("BE")
+  regionCode  String?
+  provinceCode String?
+  nisCode     String?
+  nutsCode    String?
+  ovoCode     String?
+
+  latitude    Decimal?             @db.Decimal(9, 6)
+  longitude   Decimal?             @db.Decimal(9, 6)
+
+  validFrom   DateTime?
+  validUntil  DateTime?
+
+  createdAt   DateTime             @default(now())
+  updatedAt   DateTime             @updatedAt
+
+  statisticalSectorId String?
+  statisticalSector   StatisticalSector? @relation(fields: [statisticalSectorId], references: [id])
+
+  observations           Observation[]
+  externalIdentifiers     ExternalEntityIdentifier[]
+  administrativeBoundaries AdministrativeBoundary[]
+
+  relationshipsFrom EntityRelationship[] @relation("RelationshipFrom")
+  relationshipsTo   EntityRelationship[] @relation("RelationshipTo")
+
+  transfersFrom IntergovernmentalTransfer[] @relation("TransferFrom")
+  transfersTo   IntergovernmentalTransfer[] @relation("TransferTo")
+  debtEstimateModels DebtEstimateModel[]
+
+  @@index([entityType])
+  @@index([parentId])
+  @@index([nisCode])
+}
+
+// Statistical sector classification (ESA 2010), independent from the
+// administrative parent/child hierarchy above. An entity's administrative
+// parent is not necessarily its consolidation parent.
+model StatisticalSector {
+  id          String   @id @default(uuid())
+  code        String   @unique // e.g. S13, S1311, S1312, S1313, S1314
+  name        String
+  description String?
+  parentId    String?
+  parent      StatisticalSector? @relation("SectorHierarchy", fields: [parentId], references: [id])
+  children    StatisticalSector[] @relation("SectorHierarchy")
+
+  entities GovernmentEntity[]
+}
+
+// Links canonical entities to identifiers used by external source systems
+// (NIS, NUTS, Eurostat geo codes, NBB sector codes, ...). Datasets are
+// joined on codes, never on entity names.
+model ExternalEntityIdentifier {
+  id           String   @id @default(uuid())
+  entityId     String
+  entity       GovernmentEntity @relation(fields: [entityId], references: [id])
+  scheme       String   // e.g. "EUROSTAT_GEO", "NIS", "NUTS", "NBB_SECTOR"
+  value        String
+  validFrom    DateTime?
+  validUntil   DateTime?
+
+  @@unique([scheme, value, entityId])
+  @@index([scheme, value])
+}
+
+enum EntityRelationshipType {
+  PREDECESSOR_OF
+  SUCCESSOR_OF
+  MERGED_INTO
+  SPLIT_FROM
+}
+
+// Models municipal mergers / splits so historical observations stay
+// attached to the entity that was correct at the time.
+model EntityRelationship {
+  id             String   @id @default(uuid())
+  fromEntityId   String
+  fromEntity     GovernmentEntity @relation("RelationshipFrom", fields: [fromEntityId], references: [id])
+  toEntityId     String
+  toEntity       GovernmentEntity @relation("RelationshipTo", fields: [toEntityId], references: [id])
+  relationshipType EntityRelationshipType
+  effectiveDate  DateTime
+  sourceId       String?
+  source         SourceDataset? @relation(fields: [sourceId], references: [id])
+  notes          String?
+
+  @@index([fromEntityId])
+  @@index([toEntityId])
+}
+
+// Boundary geometry kept out of the entity row; entities can have many
+// boundary versions over time (fusions, redistricting, ...).
+model AdministrativeBoundary {
+  id             String   @id @default(uuid())
+  entityId       String
+  entity         GovernmentEntity @relation(fields: [entityId], references: [id])
+  boundaryVersion String
+  source         String
+  geometryRef    String   // pointer to a stored GeoJSON asset, not inline geometry
+  validFrom      DateTime?
+  validUntil     DateTime?
+
+  @@index([entityId])
+}
+
+// ============================================================
+// DIMENSIONS: PERIOD, METRIC, UNIT, CLASSIFICATION, FRAMEWORK
+// ============================================================
+
+enum PeriodType {
+  YEAR
+  QUARTER
+  MONTH
+  DATE
+}
+
+model StatisticalPeriod {
+  id            String     @id @default(uuid())
+  periodType    PeriodType
+  year          Int
+  quarter       Int?
+  month         Int?
+  referenceDate DateTime?
+  startDate     DateTime
+  endDate       DateTime
+  label         String     // e.g. "2025", "2026-Q1", "2026-01"
+
+  observations Observation[]
+  transfers    IntergovernmentalTransfer[]
+
+  @@unique([periodType, year, quarter, month])
+  @@index([year])
+}
+
+enum MetricType {
+  STOCK
+  FLOW
+  RATIO
+  COUNT
+  INDEX
+}
+
+enum AggregationMethod {
+  SUM
+  AVERAGE
+  LAST_VALUE
+  NONE
+}
+
+model Metric {
+  id                String   @id @default(uuid())
+  code              String   @unique // e.g. government_debt, gdp, population
+  name              String
+  description       String?
+  metricType        MetricType
+  defaultUnitId     String?
+  defaultUnit       Unit?    @relation(fields: [defaultUnitId], references: [id])
+  aggregationMethod AggregationMethod @default(NONE)
+  directionMeaning  String?  // free-text note on what "higher" means, if relevant
+  isFinancial       Boolean  @default(true)
+
+  observations Observation[]
+  derivationsAsInput  DerivationInput[]
+  derivationsAsOutput DerivationDefinition[] @relation("DerivationOutputMetric")
+  transfers IntergovernmentalTransfer[]
+}
+
+model Unit {
+  id          String  @id @default(uuid())
+  code        String  @unique // EUR, EUR_MILLION, PERCENT, PERCENT_GDP, PERSONS, ...
+  name        String
+  symbol      String?
+  scaleFactor Decimal @default(1) @db.Decimal(20, 6) // multiply raw value by this to get base EUR/units
+
+  metrics      Metric[]
+  observations Observation[]
+  transfers    IntergovernmentalTransfer[]
+}
+
+model ClassificationSystem {
+  id          String @id @default(uuid())
+  code        String @unique // COFOG, ESA_TRANSACTION, BBC_POLICY_FIELD, ...
+  name        String
+  description String?
+
+  items ClassificationItem[]
+}
+
+model ClassificationItem {
+  id           String   @id @default(uuid())
+  systemId     String
+  system       ClassificationSystem @relation(fields: [systemId], references: [id])
+  code         String   // e.g. "07", "07.1"
+  name         String
+  description  String?
+  parentId     String?
+  parent       ClassificationItem? @relation("ClassificationHierarchy", fields: [parentId], references: [id])
+  children     ClassificationItem[] @relation("ClassificationHierarchy")
+  level        Int      @default(0)
+  validFrom    DateTime?
+  validUntil   DateTime?
+
+  observations Observation[]
+  transfers    IntergovernmentalTransfer[]
+
+  @@unique([systemId, code])
+}
+
+enum AccountingFrameworkCode {
+  ESA2010
+  EDP_MAASTRICHT
+  BBC_FLANDERS
+  WALLOON_LOCAL_ACCOUNTING
+  BRUSSELS_ACCOUNTING
+  FEDERAL_BUDGET_ACCOUNTING
+  COFOG
+  OTHER
+}
+
+model AccountingFramework {
+  id          String @id @default(uuid())
+  code        AccountingFrameworkCode @unique
+  name        String
+  description String?
+
+  observations   Observation[]
+  sourceDatasets SourceDataset[]
+}
+
+// ============================================================
+// SOURCES
+// ============================================================
+
+model SourceOrganisation {
+  id             String @id @default(uuid())
+  code           String @unique // EUROSTAT, NBB, STATBEL, VLAAMSE_OVERHEID, ...
+  name           String
+  website        String?
+  licenceUrl     String?
+  defaultLicence String?
+  notes          String?
+
+  datasets SourceDataset[]
+}
+
+enum DataFrequency {
+  ANNUAL
+  QUARTERLY
+  MONTHLY
+  IRREGULAR
+}
+
+model SourceDataset {
+  id                    String   @id @default(uuid())
+  organisationId        String
+  organisation          SourceOrganisation @relation(fields: [organisationId], references: [id])
+  code                  String   // e.g. gov_10q_ggdebt
+  name                  String
+  description           String?
+  landingPageUrl        String?
+  apiUrl                String?
+  metadataUrl           String?
+  dataFormat            String?  // JSON-stat, SDMX, CSV, ...
+  frequency             DataFrequency @default(IRREGULAR)
+  licence               String?
+  attributionText       String?
+  firstAvailablePeriod  String?
+  latestAvailablePeriod String?
+  accountingFrameworkId String?
+  accountingFramework   AccountingFramework? @relation(fields: [accountingFrameworkId], references: [id])
+  isOfficial            Boolean  @default(true)
+  isEnabled             Boolean  @default(true)
+  lastCheckedAt         DateTime?
+  lastChangedAt         DateTime?
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+
+  observations   Observation[]
+  importRuns     ImportRun[]
+  transfers      IntergovernmentalTransfer[]
+  mergeEvents    EntityRelationship[]
+
+  @@unique([organisationId, code])
+}
+
+// ============================================================
+// OBSERVATIONS (the generic fact table)
+// ============================================================
+
+enum ObservationStatus {
+  BUDGET
+  ADJUSTED_BUDGET
+  PROVISIONAL
+  FINAL
+  ESTIMATE
+  FORECAST
+}
+
+enum QualityStatus {
+  OFFICIAL_FINAL
+  OFFICIAL_PROVISIONAL
+  OFFICIAL_BUDGET
+  OFFICIAL_FORECAST
+  DERIVED
+  ESTIMATED
+  UNKNOWN
+}
+
+enum ConsolidationStatus {
+  UNCONSOLIDATED
+  PARTIALLY_CONSOLIDATED
+  CONSOLIDATED
+  NOT_APPLICABLE
+  UNKNOWN
+}
+
+// Entity + Metric + Period (+ optional classification/framework/sector) + Value
+// = one observation. This single fact table replaces per-metric tables
+// (DebtObservation, GDPObservation, ...) so new datasets never require a
+// schema migration.
+model Observation {
+  id     String @id @default(uuid())
+
+  entityId String
+  entity   GovernmentEntity @relation(fields: [entityId], references: [id])
+
+  metricId String
+  metric   Metric @relation(fields: [metricId], references: [id])
+
+  periodId String
+  period   StatisticalPeriod @relation(fields: [periodId], references: [id])
+
+  classificationItemId String?
+  classificationItem   ClassificationItem? @relation(fields: [classificationItemId], references: [id])
+
+  accountingFrameworkId String?
+  accountingFramework   AccountingFramework? @relation(fields: [accountingFrameworkId], references: [id])
+
+  // Raw, source-native amount. Never permanently converted (e.g. to billions);
+  // formatting/scaling happens at the presentation layer using unit.scaleFactor.
+  value    Decimal @db.Decimal(24, 6)
+  unitId   String
+  unit     Unit    @relation(fields: [unitId], references: [id])
+
+  status        ObservationStatus
+  qualityStatus QualityStatus @default(UNKNOWN)
+  consolidationStatus ConsolidationStatus @default(UNKNOWN)
+
+  sourceId String
+  source   SourceDataset @relation(fields: [sourceId], references: [id])
+
+  // Free-form extra dimension values received from the source but not yet
+  // mapped onto a first-class column (e.g. an unmapped Eurostot dimension).
+  sourceDimensions Json?
+
+  isDemoData Boolean @default(false)
+
+  importedAt  DateTime  @default(now())
+  publishedAt DateTime?
+  revisedAt   DateTime?
+
+  currentRevisionId String? @unique
+  revisions ObservationRevision[]
+  debtEstimateModels DebtEstimateModel[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([entityId, metricId, periodId, classificationItemId, accountingFrameworkId, sourceId], name: "observation_identity")
+  @@index([entityId, metricId])
+  @@index([periodId])
+  @@index([metricId, periodId])
+  // Admin dashboard: dataset detail stats and the observation inspector both
+  // filter by dataset (sourceId) at high volume.
+  @@index([sourceId])
+}
+
+// Every revision of an observation's value is preserved; observations are
+// never silently overwritten.
+model ObservationRevision {
+  id             String   @id @default(uuid())
+  observationId  String
+  observation    Observation @relation(fields: [observationId], references: [id])
+  previousValue  Decimal? @db.Decimal(24, 6)
+  newValue       Decimal  @db.Decimal(24, 6)
+  sourceVersion  String?
+  sourceUpdatedAt DateTime?
+  importRunId    String?
+  importRun      ImportRun? @relation(fields: [importRunId], references: [id])
+  detectedAt     DateTime @default(now())
+
+  @@index([observationId])
+  // Admin dashboard: revision counts/listings are frequently scoped to a
+  // dataset via `importRun.datasetId`, which joins through this column.
+  @@index([importRunId])
+}
+
+// Explicit, source-evidenced transfers between government entities. Used to
+// explain flows and guard against double counting — never inferred.
+model IntergovernmentalTransfer {
+  id     String @id @default(uuid())
+
+  fromEntityId String
+  fromEntity   GovernmentEntity @relation("TransferFrom", fields: [fromEntityId], references: [id])
+  toEntityId   String
+  toEntity     GovernmentEntity @relation("TransferTo", fields: [toEntityId], references: [id])
+
+  periodId String
+  period   StatisticalPeriod @relation(fields: [periodId], references: [id])
+
+  metricId String
+  metric   Metric @relation(fields: [metricId], references: [id])
+
+  classificationItemId String?
+  classificationItem   ClassificationItem? @relation(fields: [classificationItemId], references: [id])
+
+  value  Decimal @db.Decimal(24, 6)
+  unitId String
+  unit   Unit @relation(fields: [unitId], references: [id])
+
+  status ObservationStatus
+
+  sourceId String
+  source   SourceDataset @relation(fields: [sourceId], references: [id])
+
+  @@index([fromEntityId, toEntityId, periodId])
+}
+
+// ============================================================
+// DERIVED METRICS (computed on read, materialized only when needed)
+// ============================================================
+
+model DerivationDefinition {
+  id                 String @id @default(uuid())
+  code               String @unique // DEBT_PER_CAPITA, DEBT_TO_GDP, ...
+  name               String
+  description        String?
+  formulaDescription String
+  version            Int    @default(1)
+
+  outputMetricId String?
+  outputMetric   Metric? @relation("DerivationOutputMetric", fields: [outputMetricId], references: [id])
+
+  inputs DerivationInput[]
+}
+
+model DerivationInput {
+  id                     String @id @default(uuid())
+  derivationDefinitionId String
+  derivationDefinition   DerivationDefinition @relation(fields: [derivationDefinitionId], references: [id])
+  metricId               String
+  metric                 Metric @relation(fields: [metricId], references: [id])
+  role                   String // e.g. "numerator", "denominator"
+}
+
+// ============================================================
+// DEBT ESTIMATE MODEL (drives the homepage counter)
+// ============================================================
+
+enum DebtEstimateCalculationType {
+  LINEAR_RECENT_DEBT_CHANGE
+  LINEAR_FISCAL_FORECAST
+  CUSTOM_MODEL
+}
+
+model DebtEstimateModel {
+  id     String @id @default(uuid())
+
+  entityId String
+  entity   GovernmentEntity @relation(fields: [entityId], references: [id])
+
+  referenceObservationId String
+  referenceObservation   Observation @relation(fields: [referenceObservationId], references: [id])
+
+  methodologyVersion Int @default(1)
+  calculationType    DebtEstimateCalculationType
+
+  annualizedChange Decimal? @db.Decimal(24, 6)
+  dailyChange      Decimal? @db.Decimal(24, 6)
+
+  validFrom DateTime
+  validUntil DateTime?
+
+  sourceObservations Json
+  methodologyDescription String
+  qualityStatus QualityStatus @default(ESTIMATED)
+
+  createdAt DateTime @default(now())
+}
+
+// ============================================================
+// IMPORT PIPELINE
+// ============================================================
+
+enum ImportRunStatus {
+  RUNNING
+  SUCCESS
+  PARTIAL_SUCCESS
+  FAILED
+}
+
+model ImportRun {
+  id         String   @id @default(uuid())
+  datasetId  String
+  dataset    SourceDataset @relation(fields: [datasetId], references: [id])
+
+  startedAt   DateTime @default(now())
+  completedAt DateTime?
+  status      ImportRunStatus @default(RUNNING)
+
+  sourceLastModified DateTime?
+  sourceVersion       String?
+  sourceChecksum       String?
+
+  recordsReceived  Int @default(0)
+  recordsCreated   Int @default(0)
+  recordsUpdated   Int @default(0)
+  recordsUnchanged Int @default(0)
+  recordsRejected  Int @default(0)
+  // Unmapped rows the importer expected and intentionally does not support
+  // (e.g. other-EU-country geo codes, Statbel arrondissement aggregates) —
+  // counted separately from recordsRejected so routine, expected exclusions
+  // never make a healthy dataset look broken. See docs/ADMIN_DATA.md.
+  recordsFiltered  Int @default(0)
+
+  warnings Json?
+  errors   Json?
+
+  revisions ObservationRevision[]
+  unmappedValues UnmappedSourceValue[]
+  rawSnapshots RawSourceSnapshot[]
+
+  // Admin dashboard: dataset detail/overview list runs per dataset ordered
+  // by recency, and /admin/data/imports filters by status alone.
+  @@index([datasetId, startedAt])
+  @@index([status])
+}
+
+// Why an unmapped value exists. Not all unmapped values are equal: a
+// Statbel arrondissement row is expected and harmless, an unrecognised
+// Eurostat COFOG code is a genuine mapping gap. See docs/ADMIN_DATA.md.
+enum UnmappedCategory {
+  UNEXPECTED             // no rule matched; needs manual triage
+  EXPECTED_UNSUPPORTED   // source sends it, product intentionally doesn't support it
+  HISTORICAL_ENTITY      // valid for a past period only (e.g. defunct municipality)
+  MISSING_CANONICAL_ENTITY
+  MISSING_CLASSIFICATION
+  MISSING_METRIC_MAPPING
+  MISSING_UNIT_MAPPING
+  INVALID_SOURCE_VALUE
+  SOURCE_SCHEMA_CHANGE
+  OTHER
+}
+
+enum UnmappedSeverity {
+  INFO
+  WARNING
+  ERROR
+  CRITICAL
+}
+
+enum UnmappedStatus {
+  OPEN
+  REVIEWED
+  IGNORED_EXPECTED
+  RESOLVED
+}
+
+// External dimension values that could not be mapped to a known entity,
+// metric, unit or classification item. Surfaced in /admin/data so they are
+// never silently dropped.
+model UnmappedSourceValue {
+  id          String @id @default(uuid())
+  importRunId String
+  importRun   ImportRun @relation(fields: [importRunId], references: [id])
+  dimension   String // e.g. "geo", "unit", "na_item"
+  rawValue    String
+  context     Json?
+  detectedAt  DateTime @default(now())
+  resolvedAt  DateTime?
+
+  category    UnmappedCategory @default(OTHER)
+  severity    UnmappedSeverity @default(WARNING)
+  status      UnmappedStatus   @default(OPEN)
+
+  @@index([importRunId])
+  @@index([dimension, rawValue])
+  @@index([category])
+  @@index([severity])
+  @@index([status])
+}
+
+// Optional raw payload retention for important imports.
+model RawSourceSnapshot {
+  id          String   @id @default(uuid())
+  importRunId String
+  importRun   ImportRun @relation(fields: [importRunId], references: [id])
+  query       String
+  checksum    String
+  retrievedAt DateTime @default(now())
+  storageRef  String   // pointer to stored (compressed) payload, not inline
+}

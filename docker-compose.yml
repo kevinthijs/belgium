@@ -1,0 +1,57 @@
+name: websites-belgium
+services:
+  db:
+    image: convoy-belgium-postgres:migrated-20261109
+    container_name: websites-belgium-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: staatsrekening
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?DB_PASSWORD ontbreekt}
+      POSTGRES_DB: staatsrekening
+    volumes:
+    - pgdata:/var/lib/postgresql/data
+    networks:
+    - database
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - pg_isready -U staatsrekening -d staatsrekening
+      interval: 5s
+      timeout: 5s
+      retries: 12
+  web:
+    image: convoy-belgium:complete-comparison-20261109
+    build: .
+    container_name: websites-belgium-web
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://staatsrekening:${DB_PASSWORD}@db:5432/staatsrekening?schema=public
+      ADMIN_USERNAME: ${ADMIN_USERNAME:-admin}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:?ADMIN_PASSWORD ontbreekt}
+    ports:
+    - 127.0.0.1:3140:3000
+    networks:
+      database: null
+      proxy:
+        aliases:
+        - websites-belgium
+    healthcheck:
+      test:
+      - CMD
+      - node
+      - -e
+      - fetch('http://127.0.0.1:3000/').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))
+      interval: 30s
+      timeout: 15s
+      start_period: 60s
+      retries: 3
+volumes:
+  pgdata: null
+networks:
+  database:
+    internal: true
+  proxy:
+    name: websites-belgium_proxy
