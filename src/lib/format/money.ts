@@ -72,6 +72,11 @@ export function formatInteger(value: NumberInput, locale = "nl-BE"): string {
   return new Intl.NumberFormat(locale, { maximumFractionDigits: 0 }).format(d.toNumber());
 }
 
+/** Consumer examples need cents; public-finance totals normally use whole euros. */
+export function formatCurrencyCents(value: NumberInput, locale = "nl-BE"): string {
+  return `€ ${new Intl.NumberFormat(locale, { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(toDecimal(value).toNumber())}`;
+}
+
 /** Signed delta, e.g. +€ 12,3 miljard / -€ 3,1 miljard */
 export function formatDelta(value: NumberInput, locale = "nl-BE"): string {
   const d = toDecimal(value);

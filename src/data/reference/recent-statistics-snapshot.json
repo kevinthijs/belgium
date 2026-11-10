@@ -1,0 +1,883 @@
+{
+  "reviewedAt": "2026-11-10",
+  "sources": {
+    "vat": {
+      "dataset": "gov_10a_taxag",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10a_taxag?geo=BE&geo=FR&geo=NL&geo=DE&geo=ES&lang=EN&sector=S13&na_item=D211&unit=MIO_EUR&unit=PC_GDP&sinceTimePeriod=2024",
+      "retrievedAt": "2026-11-10T10:27:36.822863+00:00",
+      "data": {
+        "version": "2.0",
+        "class": "dataset",
+        "label": "Main national accounts tax aggregates",
+        "source": "ESTAT",
+        "updated": "2026-11-05T23:00:00+0100",
+        "value": {
+          "0": 37832.3,
+          "1": 39796.6,
+          "2": 298764.0,
+          "3": 310694.0,
+          "4": 102527.0,
+          "5": 114428.0,
+          "6": 207753.0,
+          "7": 208821.0,
+          "8": 79022.0,
+          "9": 83215.0,
+          "10": 6.1,
+          "11": 6.2,
+          "12": 6.8,
+          "13": 6.9,
+          "14": 6.4,
+          "15": 6.8,
+          "16": 7.1,
+          "17": 7.0,
+          "18": 7.1,
+          "19": 7.1
+        },
+        "status": {
+          "1": "p",
+          "2": "p",
+          "3": "p",
+          "11": "p",
+          "12": "p",
+          "13": "p"
+        },
+        "id": [
+          "freq",
+          "unit",
+          "sector",
+          "na_item",
+          "geo",
+          "time"
+        ],
+        "size": [
+          1,
+          2,
+          1,
+          1,
+          5,
+          2
+        ],
+        "dimension": {
+          "freq": {
+            "label": "Time frequency",
+            "category": {
+              "index": {
+                "A": 0
+              },
+              "label": {
+                "A": "Annual"
+              }
+            }
+          },
+          "unit": {
+            "label": "Unit of measure",
+            "category": {
+              "index": {
+                "MIO_EUR": 0,
+                "PC_GDP": 1
+              },
+              "label": {
+                "MIO_EUR": "Million euro",
+                "PC_GDP": "Percentage of gross domestic product (GDP)"
+              }
+            }
+          },
+          "sector": {
+            "label": "Sector",
+            "category": {
+              "index": {
+                "S13": 0
+              },
+              "label": {
+                "S13": "General government"
+              }
+            }
+          },
+          "na_item": {
+            "label": "National accounts indicator (ESA 2010)",
+            "category": {
+              "index": {
+                "D211": 0
+              },
+              "label": {
+                "D211": "Value added type taxes (VAT)"
+              }
+            }
+          },
+          "geo": {
+            "label": "Geopolitical entity (reporting)",
+            "category": {
+              "index": {
+                "BE": 0,
+                "DE": 1,
+                "ES": 2,
+                "FR": 3,
+                "NL": 4
+              },
+              "label": {
+                "BE": "Belgium",
+                "DE": "Germany",
+                "ES": "Spain",
+                "FR": "France",
+                "NL": "Netherlands"
+              }
+            }
+          },
+          "time": {
+            "label": "Time",
+            "category": {
+              "index": {
+                "2024": 0,
+                "2025": 1
+              },
+              "label": {
+                "2024": "2024",
+                "2025": "2025"
+              }
+            }
+          }
+        },
+        "extension": {
+          "lang": "EN",
+          "id": "GOV_10A_TAXAG",
+          "agencyId": "ESTAT",
+          "version": "1.0",
+          "datastructure": {
+            "id": "GOV_10A_TAXAG",
+            "agencyId": "ESTAT",
+            "version": "69.1"
+          },
+          "annotation": [
+            {
+              "type": "CREATED",
+              "date": "2015-02-18T14:28:42+0100"
+            },
+            {
+              "type": "DISSEMINATION_DOI_XML",
+              "title": "<adms:identifier xmlns:adms=\"http://www.w3.org/ns/adms#\" xmlns:skos=\"http://www.w3.org/2004/02/skos/core.html\" xmlns:dct=\"http://purl.org/dc/terms/\" xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"><adms:Identifier rdf:about=\"https://doi.org/10.2908/GOV_10A_TAXAG\"><skos:notation rdf:datatype=\"http://purl.org/spar/datacite/doi\">10.2908/GOV_10A_TAXAG</skos:notation><dct:creator rdf:resource=\"http://publications.europa.eu/resource/authority/corporate-body/ESTAT\"/><dct:issued rdf:datatype=\"http://www.w3.org/2001/XMLSchema#date\">2023-01-19</dct:issued></adms:Identifier></adms:identifier>"
+            },
+            {
+              "type": "DISSEMINATION_OBJECT_TYPE",
+              "title": "DATASET"
+            },
+            {
+              "type": "DISSEMINATION_TIMESTAMP_DATA",
+              "date": "2026-11-05T23:00:00+0100"
+            },
+            {
+              "type": "DISSEMINATION_TIMESTAMP_GLOBAL",
+              "date": "2026-11-05T23:00:00+0100"
+            },
+            {
+              "type": "DISSEMINATION_TIMESTAMP_PLANNED",
+              "date": "2026-11-05T23:00:00+0100"
+            },
+            {
+              "type": "ESMS_HTML",
+              "title": "Explanatory texts (metadata)",
+              "href": "https://ec.europa.eu/eurostat/cache/metadata/en/gov_10a_taxag_esms.htm"
+            },
+            {
+              "type": "ESMS_SDMX",
+              "title": "Explanatory texts (metadata)",
+              "href": "https://ec.europa.eu/eurostat/api/dissemination/files?file=metadata/gov_10a_taxag_esms.sdmx.zip"
+            },
+            {
+              "type": "OBS_COUNT",
+              "title": "1507903"
+            },
+            {
+              "type": "OBS_PERIOD_OVERALL_LATEST",
+              "title": "2025"
+            },
+            {
+              "type": "OBS_PERIOD_OVERALL_OLDEST",
+              "title": "1995"
+            },
+            {
+              "type": "SOURCE_INSTITUTIONS",
+              "text": "Eurostat"
+            },
+            {
+              "type": "UPDATE_DATA",
+              "date": "2026-11-05T23:00:00+0100"
+            },
+            {
+              "type": "UPDATE_STRUCTURE",
+              "date": "2026-04-22T11:00:00+0200"
+            }
+          ],
+          "status": {
+            "label": {
+              "p": "provisional"
+            }
+          },
+          "positions-with-no-data": {
+            "freq": [],
+            "unit": [],
+            "sector": [],
+            "na_item": [],
+            "geo": [],
+            "time": []
+          }
+        }
+      }
+    },
+    "unemployment": {
+      "dataset": "une_rt_m",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/une_rt_m?geo=BE&geo=FR&geo=NL&geo=DE&geo=ES&lang=EN&sex=T&age=TOTAL&s_adj=SA&unit=PC_ACT&sinceTimePeriod=2026-01",
+      "retrievedAt": "2026-11-10T10:27:36.816142+00:00",
+      "data": {
+        "version": "2.0",
+        "class": "dataset",
+        "label": "Unemployment by sex and age - monthly data",
+        "source": "ESTAT",
+        "updated": "2026-11-05T23:00:00+0100",
+        "value": {
+          "0": 6.3,
+          "1": 6.2,
+          "2": 6.2,
+          "3": 6.3,
+          "4": 6.3,
+          "5": 6.3,
+          "6": 6.0,
+          "7": 5.9,
+          "8": 6.0,
+          "10": 3.9,
+          "11": 3.9,
+          "12": 3.9,
+          "13": 3.9,
+          "14": 3.9,
+          "15": 4.0,
+          "16": 4.0,
+          "17": 4.1,
+          "18": 4.1,
+          "20": 10.3,
+          "21": 10.3,
+          "22": 10.3,
+          "23": 10.2,
+          "24": 10.2,
+          "25": 10.2,
+          "26": 10.2,
+          "27": 10.2,
+          "28": 10.3,
+          "30": 8.0,
+          "31": 8.2,
+          "32": 8.2,
+          "33": 8.3,
+          "34": 8.4,
+          "35": 8.3,
+          "36": 8.3,
+          "37": 8.3,
+          "38": 8.5,
+          "40": 4.0,
+          "41": 4.1,
+          "42": 4.0,
+          "43": 3.9,
+          "44": 3.9,
+          "45": 3.8,
+          "46": 4.0,
+          "47": 4.0,
+          "48": 4.0
+        },
+        "id": [
+          "freq",
+          "s_adj",
+          "age",
+          "unit",
+          "sex",
+          "geo",
+          "time"
+        ],
+        "size": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          5,
+          10
+        ],
+        "dimension": {
+          "freq": {
+            "label": "Time frequency",
+            "category": {
+              "index": {
+                "M": 0
+              },
+              "label": {
+                "M": "Monthly"
+              }
+            }
+          },
+          "s_adj": {
+            "label": "Seasonal adjustment",
+            "category": {
+              "index": {
+                "SA": 0
+              },
+              "label": {
+                "SA": "Seasonally adjusted data, not calendar adjusted data"
+              }
+            }
+          },
+          "age": {
+            "label": "Age class",
+            "category": {
+              "index": {
+                "TOTAL": 0
+              },
+              "label": {
+                "TOTAL": "Total"
+              }
+            }
+          },
+          "unit": {
+            "label": "Unit of measure",
+            "category": {
+              "index": {
+                "PC_ACT": 0
+              },
+              "label": {
+                "PC_ACT": "Percentage of population in the labour force"
+              }
+            }
+          },
+          "sex": {
+            "label": "Sex",
+            "category": {
+              "index": {
+                "T": 0
+              },
+              "label": {
+                "T": "Total"
+              }
+            }
+          },
+          "geo": {
+            "label": "Geopolitical entity (reporting)",
+            "category": {
+              "index": {
+                "BE": 0,
+                "DE": 1,
+                "ES": 2,
+                "FR": 3,
+                "NL": 4
+              },
+              "label": {
+                "BE": "Belgium",
+                "DE": "Germany",
+                "ES": "Spain",
+                "FR": "France",
+                "NL": "Netherlands"
+              }
+            }
+          },
+          "time": {
+            "label": "Time",
+            "category": {
+              "index": {
+                "2026-01": 0,
+                "2026-02": 1,
+                "2026-03": 2,
+                "2026-04": 3,
+                "2026-05": 4,
+                "2026-06": 5,
+                "2026-07": 6,
+                "2026-08": 7,
+                "2026-09": 8,
+                "2026-10": 9
+              },
+              "label": {
+                "2026-01": "2026-01",
+                "2026-02": "2026-02",
+                "2026-03": "2026-03",
+                "2026-04": "2026-04",
+                "2026-05": "2026-05",
+                "2026-06": "2026-06",
+                "2026-07": "2026-07",
+                "2026-08": "2026-08",
+                "2026-09": "2026-09",
+                "2026-10": "2026-10"
+              }
+            }
+          }
+        },
+        "extension": {
+          "lang": "EN",
+          "id": "UNE_RT_M",
+          "agencyId": "ESTAT",
+          "version": "1.0",
+          "datastructure": {
+            "id": "UNE_RT_M",
+            "agencyId": "ESTAT",
+            "version": "158.0"
+          },
+          "annotation": [
+            {
+              "type": "CREATED",
+              "date": "2016-06-13T14:18:07+0200"
+            },
+            {
+              "type": "DISSEMINATION_DOI_XML",
+              "title": "<adms:identifier xmlns:adms=\"http://www.w3.org/ns/adms#\" xmlns:skos=\"http://www.w3.org/2004/02/skos/core.html\" xmlns:dct=\"http://purl.org/dc/terms/\" xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"><adms:Identifier rdf:about=\"https://doi.org/10.2908/UNE_RT_M\"><skos:notation rdf:datatype=\"http://purl.org/spar/datacite/doi\">10.2908/UNE_RT_M</skos:notation><dct:creator rdf:resource=\"http://publications.europa.eu/resource/authority/corporate-body/ESTAT\"/><dct:issued rdf:datatype=\"http://www.w3.org/2001/XMLSchema#date\">2023-01-19</dct:issued></adms:Identifier></adms:identifier>"
+            },
+            {
+              "type": "DISSEMINATION_EXPLANATORY_LINK",
+              "title": "text-category",
+              "href": "https://ec.europa.eu/eurostat/databrowser-backend/api/public/explanatory-notes/get/Info_note_LFSQ_20240604.pdf"
+            },
+            {
+              "type": "DISSEMINATION_EXPLANATORY_LINK",
+              "title": "text-category",
+              "href": "https://ec.europa.eu/eurostat/databrowser-backend/api/public/explanatory-notes/get/Info_note_LFSQ_20240604.pdf"
+            },
+            {
+              "type": "DISSEMINATION_EXPLANATORY_LINK",
+              "title": "text-category",
+              "href": "https://ec.europa.eu/eurostat/databrowser-backend/api/public/explanatory-notes/get/Info_note_LFSQ_20240604.pdf",
+              "text": "Information note"
+            },
+            {
+              "type": "DISSEMINATION_OBJECT_TYPE",
+              "title": "DATASET"
+            },
+            {
+              "type": "DISSEMINATION_TIMESTAMP_DATA",
+              "date": "2026-11-05T23:00:00+0100"
+            },
+            {
+              "type": "DISSEMINATION_TIMESTAMP_GLOBAL",
+              "date": "2026-11-05T23:00:00+0100"
+            },
+            {
+              "type": "DISSEMINATION_TIMESTAMP_PLANNED",
+              "date": "2026-11-05T23:00:00+0100"
+            },
+            {
+              "type": "ESMS_HTML",
+              "title": "Explanatory texts (metadata)",
+              "href": "https://ec.europa.eu/eurostat/cache/metadata/en/une_rt_m_esms.htm"
+            },
+            {
+              "type": "ESMS_SDMX",
+              "title": "Explanatory texts (metadata)",
+              "href": "https://ec.europa.eu/eurostat/api/dissemination/files?file=metadata/une_rt_m_esms.sdmx.zip"
+            },
+            {
+              "type": "FOOTNOTE",
+              "title": "Footnote (metadata)",
+              "href": "https://ec.europa.eu/eurostat/cache/metadata/Annexes/une_rt_m_esms_an_footnote.xlsx"
+            },
+            {
+              "type": "OBS_COUNT",
+              "title": "759687"
+            },
+            {
+              "type": "OBS_PERIOD_OVERALL_LATEST",
+              "title": "2026-10"
+            },
+            {
+              "type": "OBS_PERIOD_OVERALL_OLDEST",
+              "title": "1983-01"
+            },
+            {
+              "type": "SOURCE_INSTITUTIONS",
+              "text": "Eurostat"
+            },
+            {
+              "type": "UPDATE_DATA",
+              "date": "2026-11-05T23:00:00+0100"
+            },
+            {
+              "type": "UPDATE_FOOTNOTES",
+              "date": "2026-10-26T17:00:24Z"
+            },
+            {
+              "type": "UPDATE_STRUCTURE",
+              "date": "2026-11-05T23:00:00+0100"
+            }
+          ],
+          "positions-with-no-data": {
+            "freq": [],
+            "s_adj": [],
+            "age": [],
+            "unit": [],
+            "sex": [],
+            "geo": [],
+            "time": [
+              9
+            ]
+          }
+        }
+      }
+    },
+    "transport": {
+      "dataset": "env_ac_tax",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/env_ac_tax?geo=BE&geo=FR&geo=NL&geo=DE&geo=ES&lang=EN&tax=TRA&unit=MIO_EUR&unit=PC_GDP&sinceTimePeriod=2024",
+      "retrievedAt": "2026-11-10T10:27:36.839420+00:00",
+      "data": {
+        "version": "2.0",
+        "class": "dataset",
+        "label": "Environmental tax revenues",
+        "source": "ESTAT",
+        "updated": "2026-02-10T23:00:00+0100",
+        "value": {
+          "0": 3406.4,
+          "1": 11545,
+          "2": 3223,
+          "3": 7472,
+          "4": 8876,
+          "5": 0.55,
+          "6": 0.27,
+          "7": 0.2,
+          "8": 0.26,
+          "9": 0.79
+        },
+        "id": [
+          "freq",
+          "tax",
+          "unit",
+          "geo",
+          "time"
+        ],
+        "size": [
+          1,
+          1,
+          2,
+          5,
+          1
+        ],
+        "dimension": {
+          "freq": {
+            "label": "Time frequency",
+            "category": {
+              "index": {
+                "A": 0
+              },
+              "label": {
+                "A": "Annual"
+              }
+            }
+          },
+          "tax": {
+            "label": "Taxes",
+            "category": {
+              "index": {
+                "TRA": 0
+              },
+              "label": {
+                "TRA": "Transport taxes"
+              }
+            }
+          },
+          "unit": {
+            "label": "Unit of measure",
+            "category": {
+              "index": {
+                "MIO_EUR": 0,
+                "PC_GDP": 1
+              },
+              "label": {
+                "MIO_EUR": "Million euro",
+                "PC_GDP": "Percentage of gross domestic product (GDP)"
+              }
+            }
+          },
+          "geo": {
+            "label": "Geopolitical entity (reporting)",
+            "category": {
+              "index": {
+                "BE": 0,
+                "DE": 1,
+                "ES": 2,
+                "FR": 3,
+                "NL": 4
+              },
+              "label": {
+                "BE": "Belgium",
+                "DE": "Germany",
+                "ES": "Spain",
+                "FR": "France",
+                "NL": "Netherlands"
+              }
+            }
+          },
+          "time": {
+            "label": "Time",
+            "category": {
+              "index": {
+                "2024": 0
+              },
+              "label": {
+                "2024": "2024"
+              }
+            }
+          }
+        },
+        "extension": {
+          "lang": "EN",
+          "id": "ENV_AC_TAX",
+          "agencyId": "ESTAT",
+          "version": "1.0",
+          "datastructure": {
+            "id": "ENV_AC_TAX",
+            "agencyId": "ESTAT",
+            "version": "27.0"
+          },
+          "annotation": [
+            {
+              "type": "CREATED",
+              "date": "2010-01-14T21:41:06+0100"
+            },
+            {
+              "type": "DISSEMINATION_DOI_XML",
+              "title": "<adms:identifier xmlns:adms=\"http://www.w3.org/ns/adms#\" xmlns:skos=\"http://www.w3.org/2004/02/skos/core.html\" xmlns:dct=\"http://purl.org/dc/terms/\" xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"><adms:Identifier rdf:about=\"https://doi.org/10.2908/ENV_AC_TAX\"><skos:notation rdf:datatype=\"http://purl.org/spar/datacite/doi\">10.2908/ENV_AC_TAX</skos:notation><dct:creator rdf:resource=\"http://publications.europa.eu/resource/authority/corporate-body/ESTAT\"/><dct:issued rdf:datatype=\"http://www.w3.org/2001/XMLSchema#date\">2023-01-19</dct:issued></adms:Identifier></adms:identifier>"
+            },
+            {
+              "type": "DISSEMINATION_OBJECT_TYPE",
+              "title": "DATASET"
+            },
+            {
+              "type": "DISSEMINATION_TIMESTAMP_DATA",
+              "date": "2026-02-10T23:00:00+0100"
+            },
+            {
+              "type": "DISSEMINATION_TIMESTAMP_GLOBAL",
+              "date": "2026-02-10T23:00:00+0100"
+            },
+            {
+              "type": "DISSEMINATION_TIMESTAMP_PLANNED",
+              "date": "2026-02-10T23:00:00+0100"
+            },
+            {
+              "type": "ESMS_HTML",
+              "title": "Explanatory texts (metadata)",
+              "href": "https://ec.europa.eu/eurostat/cache/metadata/en/env_ac_tax_esms.htm"
+            },
+            {
+              "type": "ESMS_SDMX",
+              "title": "Explanatory texts (metadata)",
+              "href": "https://ec.europa.eu/eurostat/api/dissemination/files?file=metadata/env_ac_tax_esms.sdmx.zip"
+            },
+            {
+              "type": "OBS_COUNT",
+              "title": "18592"
+            },
+            {
+              "type": "OBS_PERIOD_OVERALL_LATEST",
+              "title": "2024"
+            },
+            {
+              "type": "OBS_PERIOD_OVERALL_OLDEST",
+              "title": "1995"
+            },
+            {
+              "type": "SOURCE_INSTITUTIONS",
+              "text": "Eurostat"
+            },
+            {
+              "type": "UPDATE_DATA",
+              "date": "2026-02-10T23:00:00+0100"
+            },
+            {
+              "type": "UPDATE_STRUCTURE",
+              "date": "2026-02-10T23:00:00+0100"
+            }
+          ],
+          "positions-with-no-data": {
+            "freq": [],
+            "tax": [],
+            "unit": [],
+            "geo": [],
+            "time": []
+          }
+        }
+      }
+    },
+    "population": {
+      "dataset": "demo_gind",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_gind?geo=BE&geo=FR&geo=NL&geo=DE&geo=ES&lang=EN&indic_de=AVG&sinceTimePeriod=2024",
+      "retrievedAt": "2026-11-10T10:27:36.846678+00:00",
+      "data": {
+        "version": "2.0",
+        "class": "dataset",
+        "label": "Population change - Demographic balance and crude rates at national level",
+        "source": "ESTAT",
+        "updated": "2026-10-27T23:00:00+0100",
+        "value": {
+          "0": 11850296,
+          "1": 11919402,
+          "3": 83516593,
+          "4": 83522129,
+          "6": 48873996,
+          "7": 49359198,
+          "9": 68775952,
+          "10": 68997455,
+          "12": 17993485,
+          "13": 18087118
+        },
+        "status": {
+          "1": "p",
+          "7": "p",
+          "9": "p",
+          "10": "p"
+        },
+        "id": [
+          "freq",
+          "indic_de",
+          "geo",
+          "time"
+        ],
+        "size": [
+          1,
+          1,
+          5,
+          3
+        ],
+        "dimension": {
+          "freq": {
+            "label": "Time frequency",
+            "category": {
+              "index": {
+                "A": 0
+              },
+              "label": {
+                "A": "Annual"
+              }
+            }
+          },
+          "indic_de": {
+            "label": "Demographic indicator",
+            "category": {
+              "index": {
+                "AVG": 0
+              },
+              "label": {
+                "AVG": "Average population - total"
+              }
+            }
+          },
+          "geo": {
+            "label": "Geopolitical entity (reporting)",
+            "category": {
+              "index": {
+                "BE": 0,
+                "DE": 1,
+                "ES": 2,
+                "FR": 3,
+                "NL": 4
+              },
+              "label": {
+                "BE": "Belgium",
+                "DE": "Germany",
+                "ES": "Spain",
+                "FR": "France",
+                "NL": "Netherlands"
+              }
+            }
+          },
+          "time": {
+            "label": "Time",
+            "category": {
+              "index": {
+                "2024": 0,
+                "2025": 1,
+                "2026": 2
+              },
+              "label": {
+                "2024": "2024",
+                "2025": "2025",
+                "2026": "2026"
+              }
+            }
+          }
+        },
+        "extension": {
+          "lang": "EN",
+          "id": "DEMO_GIND",
+          "agencyId": "ESTAT",
+          "version": "1.0",
+          "datastructure": {
+            "id": "DEMO_GIND",
+            "agencyId": "ESTAT",
+            "version": "35.0"
+          },
+          "annotation": [
+            {
+              "type": "CREATED",
+              "date": "2009-03-27T17:52:43+0100"
+            },
+            {
+              "type": "DISSEMINATION_DOI_XML",
+              "title": "<adms:identifier xmlns:adms=\"http://www.w3.org/ns/adms#\" xmlns:skos=\"http://www.w3.org/2004/02/skos/core.html\" xmlns:dct=\"http://purl.org/dc/terms/\" xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"><adms:Identifier rdf:about=\"https://doi.org/10.2908/DEMO_GIND\"><skos:notation rdf:datatype=\"http://purl.org/spar/datacite/doi\">10.2908/DEMO_GIND</skos:notation><dct:creator rdf:resource=\"http://publications.europa.eu/resource/authority/corporate-body/ESTAT\"/><dct:issued rdf:datatype=\"http://www.w3.org/2001/XMLSchema#date\">2023-01-19</dct:issued></adms:Identifier></adms:identifier>"
+            },
+            {
+              "type": "DISSEMINATION_OBJECT_TYPE",
+              "title": "DATASET"
+            },
+            {
+              "type": "DISSEMINATION_TIMESTAMP_DATA",
+              "date": "2026-10-27T23:00:00+0100"
+            },
+            {
+              "type": "DISSEMINATION_TIMESTAMP_GLOBAL",
+              "date": "2026-11-03T23:00:00+0100"
+            },
+            {
+              "type": "DISSEMINATION_TIMESTAMP_PLANNED",
+              "date": "2026-11-03T23:00:00+0100"
+            },
+            {
+              "type": "ESMS_HTML",
+              "title": "Explanatory texts (metadata)",
+              "href": "https://ec.europa.eu/eurostat/cache/metadata/en/demo_gind_esms.htm"
+            },
+            {
+              "type": "ESMS_SDMX",
+              "title": "Explanatory texts (metadata)",
+              "href": "https://ec.europa.eu/eurostat/api/dissemination/files?file=metadata/demo_gind_esms.sdmx.zip"
+            },
+            {
+              "type": "OBS_COUNT",
+              "title": "64769"
+            },
+            {
+              "type": "OBS_PERIOD_OVERALL_LATEST",
+              "title": "2026"
+            },
+            {
+              "type": "OBS_PERIOD_OVERALL_OLDEST",
+              "title": "1960"
+            },
+            {
+              "type": "SOURCE_INSTITUTIONS",
+              "text": "Eurostat"
+            },
+            {
+              "type": "UPDATE_DATA",
+              "date": "2026-10-27T23:00:00+0100"
+            },
+            {
+              "type": "UPDATE_STRUCTURE",
+              "date": "2026-09-30T23:00:00+0200"
+            }
+          ],
+          "status": {
+            "label": {
+              "p": "provisional"
+            }
+          },
+          "positions-with-no-data": {
+            "freq": [],
+            "indic_de": [],
+            "geo": [],
+            "time": [
+              2
+            ]
+          }
+        }
+      }
+    }
+  }
+}

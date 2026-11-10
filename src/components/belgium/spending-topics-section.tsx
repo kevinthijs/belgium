@@ -4,6 +4,7 @@ import {
   spendingTopics,
 } from "@/data/reference/spending-topics";
 import { formatCompactCurrency, formatCurrency } from "@/lib/format/money";
+import Link from "next/link";
 
 const reviewedDate = new Intl.DateTimeFormat("nl-BE", {
   day: "numeric",
@@ -23,6 +24,7 @@ export function SpendingTopicsSection() {
         gemeenschappelijk referentiejaar. Elk bedrag heeft een eigen afbakening en bron.
       </p>
 
+      <Link href="#actuele-vergelijking" className="mt-3 inline-flex min-h-11 items-center text-sm font-medium text-accent underline underline-offset-4">Bekijk ook de recente landenvergelijking en NAVO-budgetramingen voor 2026</Link>
       <dl className="mt-8 divide-y divide-border border-y border-border">
         {spendingTopics.map((topic) => (
           <div key={topic.id} className="grid gap-3 py-6 sm:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] sm:gap-8">

@@ -4,7 +4,7 @@ import { useId, useState } from "react";
 import { ArrowUpRight, MapPinned, RotateCcw } from "lucide-react";
 import geography from "@/data/reference/europe-country-map.json";
 import {
-  explorerCountries, explorerMetrics, explorerSource, explorerUnit, explorerValues, explorerYear,
+  explorerCountries, explorerMetrics, explorerPeriod, explorerSource, explorerUnit, explorerValues,
   type ExplorerMetricKey,
 } from "@/data/reference/country-explorer";
 import { costMetrics, observationNote, type CompleteCountryCode, type CostUnit } from "@/data/reference/complete-country-comparison";
@@ -35,6 +35,7 @@ export function CountryExplorer() {
   const barMaximum = Math.max(1, ...validValues);
   const source = explorerSource(metric);
   const unitLabel = explorerUnit(metric, unit);
+  const period = explorerPeriod(metric);
   const formatted = (value: number | null) => value === null ? "Geen gegevens" : percentage ? formatPercentage(value) : unit === "pps" ? `${formatInteger(value)} PPS` : formatCurrency(value);
   const color = (code: string) => {
     const country = values.find((value) => value.code === code);
@@ -54,7 +55,7 @@ export function CountryExplorer() {
             <h2 id={`${id}-title`} className="max-w-3xl text-[clamp(1.75rem,3vw,2.5rem)] font-semibold tracking-tight">Waar zitten de verschillen?</h2>
             <p className="mt-3 max-w-2xl text-foreground-muted">Verken vijf landen op de kaart. Vergelijk hun cijfers én de verhouding ertussen, met hetzelfde jaar en dezelfde noemer per onderwerp.</p>
           </div>
-          <span className="inline-flex items-center gap-2 text-sm text-foreground-muted"><MapPinned aria-hidden="true" className="h-4 w-4" />Europa · {explorerYear}</span>
+          <span className="inline-flex items-center gap-2 text-sm text-foreground-muted"><MapPinned aria-hidden="true" className="h-4 w-4" />Europa · {period}</span>
         </div>
 
         <div className="mt-8 grid gap-4 border-y border-border py-5 sm:grid-cols-[1.6fr_1fr] lg:grid-cols-[1.4fr_1fr_1.4fr] lg:gap-6">
@@ -118,7 +119,7 @@ export function CountryExplorer() {
           <div className="min-w-0 lg:pt-14">
             <div aria-live="polite" aria-atomic="true">
               <h3 className="text-2xl font-semibold tracking-tight">{selected.name} naast {reference.name}</h3>
-              <p className="mt-2 text-sm text-foreground-muted">{metric.label} · {explorerYear} · {unitLabel}</p>
+              <p className="mt-2 text-sm text-foreground-muted">{metric.label} · {period} · {unitLabel}</p>
               <dl className="my-7 space-y-5">{[reference, selected].map((country, index) => <div key={`${country.code}-${index}`}><div className="flex items-baseline justify-between gap-4"><dt className="text-sm text-foreground-muted">{country.name}{index === 0 ? " · referentie" : ""}</dt><dd className="text-2xl font-semibold tabular-nums">{formatted(country.value)}</dd></div><div aria-hidden="true" className="mt-2 h-2 overflow-hidden rounded-sm bg-border"><div className={`comparison-bar h-full w-full rounded-sm ${index === 0 ? "bg-accent" : "bg-data-series-2"}`} style={{ transform: `scaleX(${(country.value ?? 0) / barMaximum})` }} /></div>{country.status ? <p className="mt-1 text-xs text-foreground-muted">{observationNote(country.status)}</p> : null}</div>)}</dl>
               <dl className="grid grid-cols-2 gap-5 border-y border-border py-6">
                 <div><dt className="text-xs text-foreground-muted">{percentage ? "Verschil in procentpunten" : "Verschil per inwoner"}</dt><dd key={`${metricKey}-${unit}-${referenceCode}-${selectedCode}-difference`} className="comparison-value-change mt-2 text-2xl font-semibold tabular-nums">{comparison ? percentage ? `${signed(comparison.difference)} pp` : `${comparison.difference > 0 ? "+" : comparison.difference < 0 ? "−" : ""}${unit === "pps" ? `${formatInteger(Math.abs(comparison.difference))} PPS` : formatCurrency(Math.abs(comparison.difference))}` : "Onbekend"}</dd></div>

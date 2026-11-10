@@ -1,4 +1,5 @@
 import { CountryExplorer } from "./country-explorer";
+import { RecentCountryComparison } from "./recent-country-comparison";
 import Link from "next/link";
 import {
   completeComparisonCountries as countries, comparisonContextReviewedAt, comparisonContextYear,
@@ -15,6 +16,7 @@ const reviewedDate = new Intl.DateTimeFormat("nl-BE", { day: "numeric", month: "
 export function CompleteCountryComparison() {
   return (
     <>
+      <RecentCountryComparison />
       <CountryExplorer />
       <AdministrationCostComparison />
       <section id="publieke-resultaten" aria-labelledby="publieke-resultaten-titel" className="mx-auto max-w-content px-4 py-12 sm:px-6 sm:py-16 lg:px-8">

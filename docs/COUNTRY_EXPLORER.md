@@ -4,7 +4,7 @@ De sectie `#landenkaart` staat op `/vergelijk` en `/belgie`; de startpagina verw
 
 ## Cijfers en noemers
 
-De zeven onderwerpen gebruiken uitsluitend de bestaande gecontroleerde momentopname uit `complete-country-comparison-snapshot.json`, jaar 2024: bestuurskosten, overheidspersoneelskosten, onderwijsuitgaven, zorguitgaven, werkzaamheid, aandeel 65-plussers en onvervulde medische behoefte. Bronmarkeringen en definities blijven zichtbaar. Werkzaamheid meet alle werkenden, niet alleen overheidspersoneel.
+De oorspronkelijke zeven onderwerpen gebruiken uitsluitend de bestaande gecontroleerde momentopname uit `complete-country-comparison-snapshot.json`, jaar 2024: bestuurskosten, overheidspersoneelskosten, onderwijsuitgaven, zorguitgaven, werkzaamheid, aandeel 65-plussers en onvervulde medische behoefte. Bronmarkeringen en definities blijven zichtbaar. Werkzaamheid meet alle werkenden, niet alleen overheidspersoneel.
 
 Financiële onderwerpen ondersteunen % van bbp, euro per inwoner en PPS per inwoner. PPS gebruikt de bestaande brede bbp-koopkrachtcorrectie. Bevolkingsaandelen behouden hun eigen noemer, onafhankelijk van de financiële eenheidskeuze.
 
@@ -37,3 +37,5 @@ Publiceren: `sg docker -c 'bash scripts/deploy-government-comparison.sh'`. Het s
 Op 10 november 2026 gepubliceerd met image `convoy-belgium:map-motion-20261110-v2`. De 189 tests en de productiebuild inclusief lint- en typecontrole slagen. Browsercontrole op de vier genoemde breedtes bevestigt alle onderwerpen en eenheden, referentiewisseling, toetsenbordbediening, bronlinks en minder beweging, zonder browserfouten of horizontale pagina-overflow. Lichte en donkere weergave zijn visueel beoordeeld.
 
 Vorige configuratie: `/docker/backups/belgium-government-20261110T080337Z/docker-compose.before.yml`. De database is niet gewijzigd. De publieke startpagina, `/vergelijk` en `/belgie` geven HTTP 200. Interactieve productiecontrole op 1440 en 390 pixels bevestigt werkende kaart- en startpaginakeuzes, zonder browserfouten of pagina-overflow. De mobiele dossiernavigatie blijft binnen de paginabreedte. Web en database zijn gezond. De validatierapporten staan in dezelfde back-upmap.
+
+De vier latere onderwerpen (btw-opbrengst, werkloosheid, transportbelastingen en NAVO-verdeelsleutel) volgen hun eigen gemeenschappelijke periode. Het bronjaar op de kaart verandert mee. Zie [recente belastingen en arbeidsmarkt](RECENT_COUNTRY_COMPARISON.md) voor bronnen, actuele perioden en afbakeningen.

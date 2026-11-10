@@ -4,7 +4,7 @@ import { explorerCountries, explorerMetrics, explorerObservation, explorerValues
 
 describe("country explorer source coverage", () => {
   it("has reviewed data for all topics, units and five countries", () => {
-    expect(explorerMetrics).toHaveLength(7);
+    expect(explorerMetrics).toHaveLength(11);
     for (const metric of explorerMetrics) {
       for (const unit of ["gdp", "euro", "pps"] as const) {
         const values = explorerValues(metric.key, unit);
@@ -26,7 +26,7 @@ describe("country explorer source coverage", () => {
     for (const country of explorerCountries) {
       const features = geography.features.filter((feature) => feature.code === country.code);
       expect(features).toHaveLength(1);
-      expect(features[0].path).toMatch(/^M/);
+      expect(features[0]!.path).toMatch(/^M/);
       const points = geography.labels[country.code as keyof typeof geography.labels];
       for (const [x, y] of [points.anchor, points.label]) {
         expect(x).toBeGreaterThanOrEqual(0);
